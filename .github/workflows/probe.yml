@@ -9,17 +9,30 @@ on:
         description: 'Optional regex: print only matching lines/links instead of the first 2500 chars'
         required: false
         default: ''
+      browser:
+        description: 'Render with headless Chromium first (yes/no)'
+        required: false
+        default: 'no'
 jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          pip install -q requests
+          pip install -q requests playwright
+          if [ "$BROWSER" = "yes" ]; then python -m playwright install --with-deps chromium >/dev/null; fi
           python - <<'PY'
           import os, re, requests
           for u in os.environ["URLS"].split():
+              if os.environ.get("BROWSER") == "yes":
+                  from playwright.sync_api import sync_playwright
+                  with sync_playwright() as p:
+                      b = p.chromium.launch(); pg = b.new_page(); pg.goto(u, wait_until="networkidle", timeout=60000)
+                      html = pg.content(); b.close()
+                  class R: pass
+                  r = R(); r.status_code = "rendered"; r.url = u; r.text = html
               try:
-                  r = requests.get(u, timeout=30, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"})
+                  if os.environ.get("BROWSER") != "yes":
+                      r = requests.get(u, timeout=30, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"})
                   print("=====", u, r.status_code, r.url, len(r.text)); g = os.environ.get("GREP")
                   if g:
                       for m in sorted(set(re.findall(r'href="([^"]*)"', r.text))):
@@ -33,3 +46,4 @@ jobs:
         env:
           URLS: ${{ inputs.urls }}
           GREP: ${{ inputs.grep }}
+          BROWSER: ${{ inputs.browser }}
