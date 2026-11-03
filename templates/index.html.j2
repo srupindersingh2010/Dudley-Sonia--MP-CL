@@ -262,7 +262,9 @@
       {% if d.whatson.days %}
         {% for day in d.whatson.days %}
         <h4 class="day-h">{{ day.display }}</h4>
-        <ul class="bus">{% for e in day.events %}<li>{% if e.time %}<span class="t">{{ e.time }}</span>{% endif %}<span><strong>{{ e.title }}</strong>{% if e.category %} <span class="muted">· {{ e.category }}</span>{% endif %}{% if e.involvesMp %} <span class="tag tag-gold">Sonia taking part</span>{% endif %}</span></li>{% endfor %}</ul>
+        {% set ns = namespace(hidden=0) %}
+        <ul class="bus">{% for e in day.events %}{% if e.involvesMp or (e.title not in ("Select & Joint Committees", "General Committee") and "Private Meeting" not in e.category) %}<li>{% if e.time %}<span class="t">{{ e.time }}</span>{% endif %}<span><strong>{{ e.title }}</strong>{% if e.category %} <span class="muted">· {{ e.category }}</span>{% endif %}{% if e.involvesMp %} <span class="tag tag-gold">Sonia taking part</span>{% endif %}</span></li>{% else %}{% set ns.hidden = ns.hidden + 1 %}{% endif %}{% endfor %}</ul>
+        {% if ns.hidden %}<p class="muted small">Plus {{ ns.hidden }} committee meeting{{ "s" if ns.hidden > 1 }} – see the full calendar.</p>{% endif %}
         {% endfor %}
       {% else %}{{ empty(d.whatson.note or "Commons business for the week appears here.") }}{% endif %}
       <p><a href="https://whatson.parliament.uk/commons/">Full Commons calendar on What's On {{ icon("ext","ico ico-xs") }}</a></p>
@@ -436,7 +438,7 @@
     <div class="card team">
       <h4>{{ t.name }}</h4>
       <p class="muted small">Covers places including {{ t.places|join(", ") }}</p>
-      {% if t.priorities %}<p class="lbl">Current priorities</p><ul class="plain small">{% for pr in t.priorities %}<li>{{ pr.issue[:220] }}</li>{% endfor %}</ul>{% endif %}
+      {% if t.priorities %}<p class="lbl">Current priorities</p><ul class="plain small">{% for pr in t.priorities %}<li>{{ pr.issue|truncate(240, False, "…", 0) }}</li>{% endfor %}</ul>{% endif %}
       {% if t.officers %}<details class="more"><summary>Team ({{ t.officers|length }})</summary><ul class="plain small">{% for o in t.officers %}<li>{{ o.name }} – {{ o.rank }}</li>{% endfor %}</ul></details>{% endif %}
       {% if t.events %}<p class="lbl">Upcoming police events</p><ul class="plain small">{% for e in t.events %}<li>{{ e.start|nicedt }} – {{ e.title }}{% if e.address %} ({{ e.address }}){% endif %}</li>{% endfor %}</ul>{% endif %}
       <p class="small">{% if t.email %}<a href="mailto:{{ t.email }}">Email the team</a> · {% endif %}<a href="{{ t.url }}">Team page {{ icon("ext","ico ico-xs") }}</a></p>
