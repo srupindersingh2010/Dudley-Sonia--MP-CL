@@ -5,6 +5,10 @@ on:
       urls:
         description: 'Space-separated URLs to test'
         required: true
+      grep:
+        description: 'Optional regex: print only matching lines/links instead of the first 2500 chars'
+        required: false
+        default: ''
 jobs:
   probe:
     runs-on: ubuntu-latest
@@ -12,13 +16,20 @@ jobs:
       - run: |
           pip install -q requests
           python - <<'PY'
-          import os, requests
+          import os, re, requests
           for u in os.environ["URLS"].split():
               try:
                   r = requests.get(u, timeout=30, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"})
-                  print("=====", u, r.status_code, r.url, len(r.text)); print(r.text[:2500])
+                  print("=====", u, r.status_code, r.url, len(r.text)); g = os.environ.get("GREP")
+                  if g:
+                      for m in sorted(set(re.findall(r'href="([^"]*)"', r.text))):
+                          if re.search(g, m, re.I): print("  LINK", m)
+                      for m in re.findall(r'[^{}\n]{0,160}(?:' + g + r')[^{}\n]{0,160}', r.text, re.I)[:40]: print("  TXT", m.strip())
+                  else:
+                      print(r.text[:2500])
               except Exception as e:
                   print("=====", u, "ERROR", e)
           PY
         env:
           URLS: ${{ inputs.urls }}
+          GREP: ${{ inputs.grep }}

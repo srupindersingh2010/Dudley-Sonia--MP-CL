@@ -26,7 +26,7 @@ def fetch_profile():
         "constituency": (m.get("latestHouseMembership") or {}).get("membershipFrom"),
         "memberSince": iso_date((m.get("latestHouseMembership") or {}).get("membershipStartDate")),
         "memberSinceDisplay": fmt((m.get("latestHouseMembership") or {}).get("membershipStartDate")),
-        "status": ((m.get("latestHouseMembership") or {}).get("membershipStatus") or {}).get("statusDescription"),
+        "memberStatus": ((m.get("latestHouseMembership") or {}).get("membershipStatus") or {}).get("statusDescription"),
         "profileUrl": f"https://members.parliament.uk/member/{MID}",
     }
     try:

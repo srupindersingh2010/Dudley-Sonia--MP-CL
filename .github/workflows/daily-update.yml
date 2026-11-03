@@ -74,5 +74,5 @@ jobs:
           git add data index.html privacy.html
           if git diff --staged --quiet; then echo "No changes"; exit 0; fi
           git commit -m "Daily update $(TZ=Europe/London date '+%Y-%m-%d %H:%M %Z')"
-          git pull --rebase origin main
+          git pull --rebase -X theirs origin main
           git push origin HEAD:main
