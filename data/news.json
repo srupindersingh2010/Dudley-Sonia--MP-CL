@@ -3,10 +3,168 @@
   "label": "Local news",
   "source": "RSS feeds (see list)",
   "sourceUrl": "https://news.google.com/",
-  "status": "pending",
-  "retrieved": null,
-  "retrievedDisplay": null,
-  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
-  "lastError": "RuntimeError: Sonia Kumar MP website: https://sonia-kumar.co.uk/feed/ failed: ProxyError: HTTPSConnectionPool(host='sonia-kumar.co.uk'; Google News – Sonia Kumar: https://news.google.com/rss/search?q=%22Sonia%20Kumar%22%20(MP%20OR%20Dudley)%20 failed: Prox; Express & Star: https://www.expressandstar",
-  "items": []
+  "status": "ok",
+  "retrieved": "2026-11-03T09:01:56.989146+00:00",
+  "retrievedDisplay": "3 November 2026, 09:01",
+  "lastAttempt": "2026-11-03T09:01:56.989146+00:00",
+  "items": [
+    {
+      "title": "Dudley town centre could benefit from £3m fund to transform derelict buildings",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPcDZ0VVAyczAtRWxPODZWYk1VT1V1SEVHN2ZYWS1kd2RRLTdwNTVjQmlKUTlabHlLZU1rYmNCNHNZTG9nZ2pUc1JDYmJIai1hdHJWQTdIQzh5aHVHZjk3ai1Hd293S0FCVUIzRDA0MTN3LTctWUE4SzNrcmJuQndENDN0ZTRUYlQ1S1d0a2Q4Q2ZVYk5NOVc2aDVrdw?oc=5",
+      "summary": "Dudley town centre could benefit from £3m fund to transform derelict buildings Dudleynews.co.uk",
+      "publisher": "Dudleynews.co.uk",
+      "published": "2026-11-03T05:00:00+00:00",
+      "publishedDisplay": "3 Nov 2026",
+      "feed": "Google News – Sonia Kumar"
+    },
+    {
+      "title": "Dudley MP among politicians raising alarm over Poundland administration threat",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQWVhQcUNaZVc0RkN1emxWMGlpOVJYNlcyczJsMllPRENnNF9WQXBXazJtbENacFhoZ3VubWtRTi1SMmQyOGkwMDNmTDMta1RQOTk0TEdjRUhHS3VleWgtT3FfdEdlaU5FTC1uendLYUpHVzNDZ1dmMmNqcGVsdFhrYmtFb3pBTDVFYklIbnh3Qm5MT2NDYnZpa1FaMldGc0N1aE5lT1RHNGRYb19JV3B4R1FRUzV1VmU0NUt4ZTg1SXZSdTc1NDBNZjJHb1Zha2s?oc=5",
+      "summary": "Dudley MP among politicians raising alarm over Poundland administration threat Express and Star",
+      "publisher": "Express and Star",
+      "published": "2026-10-30T19:00:00+00:00",
+      "publishedDisplay": "30 Oct 2026",
+      "feed": "Google News – Sonia Kumar"
+    },
+    {
+      "title": "Andy Burnham government parking crackdown 'needed' says Dudley MP as nurse faces charges",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPeUV2MEt4bHVUQkhNVDlfRWxOUmxKNF9IOW5zc1F6SlJuNGlRZUFVUTBrUnNPR25kbmtYUFFva0htN2pxNU1QV2pHVktzU0MxX1RrNDF5LWpUN2NPMGxKMnRYVXdGcWFWMF9MTjVhZU1kY3d6Y1BSWThlVWhpT3ZBaWRPemJoYnA5UFBIZmVtVTN1d3Z4di1kY0FFSkNhZ9IBowFBVV95cUxPcXM1dWU3YjVwdzh3dzllRzEySWZCd0NadG0xdGNiTUo2bVpXR3hmbUJibTBZMm8yakNaMzNVY25ad1NzTjJBZ0NHUWlaeW5vOWYtMm9maU9zMVktd1ZaY3djMUVkdnQ0Wnh2ZlFlalZJUkExNjRWektxR0ZhQTNzX2FxMVN0NXZCcnUtSTdCQ1FWM0doaWZJOHFvVjRvenhBM1Nr?oc=5",
+      "summary": "Andy Burnham government parking crackdown 'needed' says Dudley MP as nurse faces charges Birmingham Live",
+      "publisher": "Birmingham Live",
+      "published": "2026-10-21T07:00:00+00:00",
+      "publishedDisplay": "21 Oct 2026",
+      "feed": "Google News – Sonia Kumar"
+    },
+    {
+      "title": "Leader of the Commons pays tribute to volunteers at Dudley's Wren's Nest nature reserve",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPc1l4U1BzV1N1Vk9YWThSVHVWc2FHek56bEo2Wm9LNWI4eVdfQktqNnVYTVNYa29XQlgwTy0wYk9faXBpVjlYZ084alJTYlpJYnNucnQwWjV2ak5xUFZCZ2pFWFp6QnRhMDkxNGJLbnlzcE9NTklsNTc0cFUtSkRsc0RvMnk2RTFSVmo3NzBNUXhOdThuM0tJM21Ma1M5REhKN0Vyc043QTFwclBQbnF6QVhTaFRkQWFQbk1TeFBUeXJsdlpackpzYw?oc=5",
+      "summary": "Leader of the Commons pays tribute to volunteers at Dudley's Wren's Nest nature reserve Express and Star",
+      "publisher": "Express and Star",
+      "published": "2026-10-19T07:00:00+00:00",
+      "publishedDisplay": "19 Oct 2026",
+      "feed": "Google News – Sonia Kumar"
+    },
+    {
+      "title": "Council accuses MP of 'point scoring' after she critiques use of town centre funding",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbFhYZW9vZ1Rkdzl4U2VNR3JxWTFMMnQ1Tl9pM1loSzJnVnQ2OUI3eTdQVXVReFByNHo0MXpkR0I0RjFZdXZjU19OeS1TcmFUU0Q0VUJqbmVjdkFkZXlPd25IelY1NWsza2ZCWmR6MUtLNWhRSTM1MEEzMFJ5bzU4bVRxVkZycVgwN2l4SEN5THB1TnNIaUZzQS1kWF8wUnFuVzViTXBFR0xUTk1WWUhuaFdR?oc=5",
+      "summary": "Council accuses MP of 'point scoring' after she critiques use of town centre funding Stourbridge News",
+      "publisher": "Stourbridge News",
+      "published": "2026-10-13T07:00:00+00:00",
+      "publishedDisplay": "13 Oct 2026",
+      "feed": "Google News – Sonia Kumar"
+    },
+    {
+      "title": "MPs Sonia Kumar and Alex Ballinger see how Dudley Reservists train for drone warfare",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQTGw1ak1Bc3o3WE1ua3JDYnUxRHZmeEdlSG9SM3o4LUhtcVhsb0NyX3dTNGdndm5EcGxiOExEYTF6bUVyTHJWMkVobVJldzYxVk9sMEUxWDA3bURWblVhcXIxdktzQ2ctQkdSb3FwSGdfdDVPb2FYLVByekFDVnJqeUxBcnZsYno0cWVjX1lnVW5lOHdNSDdERzZQbjFLdw?oc=5",
+      "summary": "MPs Sonia Kumar and Alex Ballinger see how Dudley Reservists train for drone warfare Dudleynews.co.uk",
+      "publisher": "Dudleynews.co.uk",
+      "published": "2026-10-12T07:00:00+00:00",
+      "publishedDisplay": "12 Oct 2026",
+      "feed": "Google News – Sonia Kumar"
+    },
+    {
+      "title": "Savaria welcomes Dudley MP to its Kingswinford facility to celebrate National Manufacturing Day",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNbUE5MUVNdWdUcmIzTGloWkpaR2Z3YmFUM2hGdWYxVVd3dmF5WVZCZ015MFZyUTVSZlh0bGZhR29BVzBpT0NkTWNQcng5Um5aZVFrRGZYZXFVR3QtNjJpZUJ0dGVEa2hGamIwbllBeW5ObGRXb0ZONFhxOC1XaGFiSlp3anVWUENRT0Nzdy1tN051QTU0UGt5ci1vdWYwckFjUEdVODhDdW15a3loRlBybWNIX29lcGc?oc=5",
+      "summary": "Savaria welcomes Dudley MP to its Kingswinford facility to celebrate National Manufacturing Day THIIS Magazine",
+      "publisher": "THIIS Magazine",
+      "published": "2026-10-09T07:00:00+00:00",
+      "publishedDisplay": "9 Oct 2026",
+      "feed": "Google News – Sonia Kumar"
+    },
+    {
+      "title": "Dudley MP joins police on streets as major crackdown on crime gets underway",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOeDAxREx3S3ZzRlgtNVI1S19CTmF1QjR3RTRlRDg5R0RNVFdrMExpbXl4NVcwOVIzM2E0Rko3cklYcXgwM0h3UTFhRDBsS2xKUG00WXN6TnlQa1B0cGhBdlY5YU5fY0hTVldTeGhrOVc0SElpRHJtMWxYcUN4NlZjUWpvUDk0OFhZdjY3QU5sN3RrUDZfMlIzcDNObXk?oc=5",
+      "summary": "Dudley MP joins police on streets as major crackdown on crime gets underway Dudleynews.co.uk",
+      "publisher": "Dudleynews.co.uk",
+      "published": "2026-10-09T07:00:00+00:00",
+      "publishedDisplay": "9 Oct 2026",
+      "feed": "Google News – Sonia Kumar"
+    },
+    {
+      "title": "Leading Dudley councillor tells MP to 'stop point scoring' in town centre regeneration row",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPRnd3RS1HNVJCYVhuYnNLQ1hEOVFuVHRxMjBiZDdZLXc0UDNVNERQRTRNajVRcW5JZU1tX09mUk9Ca0EtTDJmR1ZNY1V1dVlGTngyWFJpWjF1ZERzWkk0Q0JwWU8tS19TTU44dWRocDgwNDJOaGhYcm1xM1hCdTFldEJ5M3MzbXNKUVpYZmMwS2tXYkFv0gGaAUFVX3lxTE1VZTlQb2RnTjFERVFuN1hfbHRDRExVeS1Zd2tQOGxDTGNYNEkzQXllel9XTHNULXllc1ozNG80Z1Z1RkdUUlFEZWV5bHkyM1hlRXl0aGNkSjRLYmVVRDBFWGNSRGxBRXROLTZQUEF0cmhaTUk3RzMxRmdxM2ZYbkpScjRRenB6VkJ5TjhOUlJ4UmZHN1RTdFZuTHc?oc=5",
+      "summary": "Leading Dudley councillor tells MP to 'stop point scoring' in town centre regeneration row Birmingham Live",
+      "publisher": "Birmingham Live",
+      "published": "2026-10-07T07:00:00+00:00",
+      "publishedDisplay": "7 Oct 2026",
+      "feed": "Google News – Sonia Kumar"
+    },
+    {
+      "title": "MP criticises 'unfair' use of £310,000 Dudley town centre grant to fund £50,000 regeneration post",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOTjdlZDBqUU9QWmY1bXc2dUVaMnNjZC1KOUh6N0hzanhubHVjUVZaMDNvN0l4VzhJTmhxck81YUVBX0dhdmZvMUpTaF9PMGpKX1U5RkpqakpVLVctaDBzeExOMTVoVUx1eTNBUEpCR09hQmtWamVHREswSmxfTFhGY1drWFJGaHdFSU51VWVwVnhsV3BvS3BTUm52MDlQY2dJMFBCUTJTUVVmSnZFTlI0cGdiNDNUTjU5cDREVm94OVhrTGVYcW93WUo4TFJDMEIxZ3dWV0p3?oc=5",
+      "summary": "MP criticises 'unfair' use of £310,000 Dudley town centre grant to fund £50,000 regeneration post Express and Star",
+      "publisher": "Express and Star",
+      "published": "2026-10-04T07:00:00+00:00",
+      "publishedDisplay": "4 Oct 2026",
+      "feed": "Google News – Sonia Kumar"
+    },
+    {
+      "title": "Dudley charity helping families in hardship issues appeal for support",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOMTV4QnFXY0QtYVlGSlhDU1JZckhDb0ZIYzk4MnJfSk13N2I0M2JweHRQMEN2SVhzS0E1aEtXUU9mZkF1aUhCRVJud1VoZnU1X3I4RW9vZ05VUmo0RXpHelZLdFd1a1dHZ0YyUG44bDBvR3FuSGJoSVVoZDhXWXk3M1M1dEx5Y1ExSXluNDhRa1AwTUExbWs4UWd3?oc=5",
+      "summary": "Dudley charity helping families in hardship issues appeal for support Dudleynews.co.uk",
+      "publisher": "Dudleynews.co.uk",
+      "published": "2026-09-23T07:00:00+00:00",
+      "publishedDisplay": "23 Sep 2026",
+      "feed": "Google News – Sonia Kumar"
+    },
+    {
+      "title": "‘Disgusting’ treatment for SEND child slammed by MP",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNenAtRUZEVkg4RmlUaTRvSVhBUk4zQVN3QlE2R2tjMXc3YjhjWTR0bWJvUXdvUVJ2d1pyMG9DLXlST1EybnRmb3NtUDVzVmFTeUl0RlRqUXNNT3g5V0lZMWZabW4takp0MDFCY245NXdFR0pLSUtnY2VIcldaX25BVW5QNHVJaG42eGNpS0lCdzlYb191RmF6U3JlYVo?oc=5",
+      "summary": "‘Disgusting’ treatment for SEND child slammed by MP Stourbridge News",
+      "publisher": "Stourbridge News",
+      "published": "2026-09-22T07:00:00+00:00",
+      "publishedDisplay": "22 Sep 2026",
+      "feed": "Google News – Sonia Kumar"
+    },
+    {
+      "title": "MP calls for 'Body, Bedroom, Brain' health checks in Dudley to be made permanent",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOOEVDRjJ0czlmaE53REdzWDNMTXFmeUZLLUtpMzAzM3ppbzFuN2Y0cjdnakF3MkxRcUo3MHNtc2R1R2p4MGFxRjZYdjdCZnZuSUF5OHlBUWNROHM3RDRyVzR5UmYta21EOHNtb002Wmo0OWt0eVlfSWFLZ1VQb0xsVllVZ2RhMDBZd0NIYWgxdHlPZmVOY2x3N24tRi11UzJwMTVGVFViaGY1OG9YV25YQlJkYi1ybnNyWFRGaA?oc=5",
+      "summary": "MP calls for 'Body, Bedroom, Brain' health checks in Dudley to be made permanent Express and Star",
+      "publisher": "Express and Star",
+      "published": "2026-09-21T07:00:00+00:00",
+      "publishedDisplay": "21 Sep 2026",
+      "feed": "Google News – Sonia Kumar"
+    },
+    {
+      "title": "Sonia Kumar MP - Backing the people who keep Dudley going",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPTUZYTXAxMUM0S3hBT3pQRjhpWHZoVU53enY5NVBMN0c1Y1l5U0JpQ2k1dVBCT1pBeE91dFVHQzZlUk5QNVRCYVJXVFNmTE5PVnh2TUtiZnNNT3l3R04zUEpMRHpYUTl4MVdHZzFrXzFWTVlfbVVkczl3SUJvdjFYRUZyVDZsYzBucFNDWjYzMFoyQVd4T0Z2Vg?oc=5",
+      "summary": "Sonia Kumar MP - Backing the people who keep Dudley going Dudleynews.co.uk",
+      "publisher": "Dudleynews.co.uk",
+      "published": "2026-09-17T07:00:00+00:00",
+      "publishedDisplay": "17 Sep 2026",
+      "feed": "Google News – Sonia Kumar"
+    },
+    {
+      "title": "The Wicklow Witch opens new immersive shop in Dudley",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQZEJtQ0FCalNOelAtY3MzR0plQnVIbDBPMWN3RFhtSVlGUWd0SGxJaEd4N1ZjQkhNVGJvdU52cHVwdnFQSzB5ZWU4eG51RXFFNUExa3lkUFREWDdiVTRFaUJWRXA4R2syLV9BOEtzZjNuUnBkYWxlTVNiZmV4MmtSQTBiQ19fRUNxQTdNWjhqSmRpX1Vpemc?oc=5",
+      "summary": "The Wicklow Witch opens new immersive shop in Dudley Dudleynews.co.uk",
+      "publisher": "Dudleynews.co.uk",
+      "published": "2026-09-08T07:00:00+00:00",
+      "publishedDisplay": "8 Sep 2026",
+      "feed": "Google News – Sonia Kumar"
+    }
+  ],
+  "feedErrors": [
+    "Sonia Kumar MP website: https://sonia-kumar.co.uk/feed/ failed: HTTP 403",
+    "Express & Star: https://www.expressandstar.com/arc/outboundfeeds/rss/category/news/local-hubs/du failed: HTTP 404",
+    "Black Country Radio: https://www.blackcountryradio.co.uk/news/local-headlines/feed/ failed: HTTP 404",
+    "Dudley Council news: https://councilnews.dudley.gov.uk/news/rss failed: HTTP 404"
+  ],
+  "feeds": [
+    {
+      "name": "Sonia Kumar MP website"
+    },
+    {
+      "name": "Google News – Sonia Kumar"
+    },
+    {
+      "name": "Express & Star"
+    },
+    {
+      "name": "Black Country Radio"
+    },
+    {
+      "name": "Dudley Council news"
+    }
+  ]
 }

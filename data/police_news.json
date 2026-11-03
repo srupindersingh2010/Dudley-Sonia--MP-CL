@@ -3,10 +3,90 @@
   "label": "Police news",
   "source": "Google News search",
   "sourceUrl": "https://news.google.com/",
-  "status": "pending",
-  "retrieved": null,
-  "retrievedDisplay": null,
-  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
-  "lastError": "RuntimeError: https://news.google.com/rss/search?q=%22West%20Midlands%20Police%22%20%28Dudley% failed: ProxyError: HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=%22West%20Midlands%20Police%22%20%28Dudley%20OR%20Sedgley%20OR%20Gornal%20OR%20Pensne",
-  "items": []
+  "status": "ok",
+  "retrieved": "2026-11-03T09:01:56.989146+00:00",
+  "retrievedDisplay": "3 November 2026, 09:01",
+  "lastAttempt": "2026-11-03T09:01:56.989146+00:00",
+  "items": [
+    {
+      "title": "Bus services diverted due to police incident at busy Dudley junction",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPTGh0eDVCM3ZGcXo5aElUOEc4MHlBcnhEc09ldUZneE5tRkRtYmxweGcwVUM1NkpmeTlyd0lEaVFtam1NdVltZXlmbk5XeWh4MnBTR1kwYlFqNFRvaEVMLU1xaDN1Zl9oeDdabFl4eFhMc2tQMFF3S0RmTlI0a0RkdlpiQWhNQWpuak1KWWdoOG1Ba3Z4ZGZxWUxKR3B1MmhiWWE0Slo3dlp3MzJkNkRSMHd3?oc=5",
+      "summary": "Bus services diverted due to police incident at busy Dudley junction Express and Star",
+      "publisher": "Express and Star",
+      "published": "2026-11-02T18:58:00+00:00",
+      "publishedDisplay": "2 Nov 2026"
+    },
+    {
+      "title": "Woman arrested after stolen items posted to social media in Dudley",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNeENoR0xjcDJyZXd0YVY0NjgxaUEwWWs4VmY0aXVBcDZlVW9xRzRxWTlfSHV5T05wXzZjQmt3WG5ZVkFhcDN6ZTQxMFF0a3dhSk5tUERHeHN6Zlhxc0s0RGhPYjJNLS0wU1ZKOWNjbHNQTy1ZNGltakRFbWp3cmhwNkpxR2VjZjVZNzluakQtT2VpWWhlSjNQeWFhOTI?oc=5",
+      "summary": "Woman arrested after stolen items posted to social media in Dudley Rayo",
+      "publisher": "Rayo",
+      "published": "2026-11-02T14:41:48+00:00",
+      "publishedDisplay": "2 Nov 2026"
+    },
+    {
+      "title": "Collision leaves area around flag pole damaged in Sedgley town centre",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOSUxvMkFLa0dpZEwxYUpEVmV3eEFVY1hiMThiV3JWaW9sWHlIaVRqYm9QQ1pmQ2pQcnJ1WUF1cTIyX1V5M0phc25zZG9Pc3VSbFZtZ3ZQa1J6eW1LRTJUMzlWSlBKank0dE9Gb294NEJmY2E1Vm1PZWlSVlE0dGlfU1VJWXB2ZDlZWFpiRENVQVVPb3V3TzVNaW1hN0kzM2NXLWVGRm9XMVpUM3E0VHQwS29GNA?oc=5",
+      "summary": "Collision leaves area around flag pole damaged in Sedgley town centre Express and Star",
+      "publisher": "Express and Star",
+      "published": "2026-11-02T12:48:00+00:00",
+      "publishedDisplay": "2 Nov 2026"
+    },
+    {
+      "title": "Woman, 38, arrested in Dudley after police discover social media posts",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNbjh1Z1dUM1lhbkVSZ1A5emJ6aHBfYjdocFliU0NXd2hOaHRaenp5TFBpMGx3QXhFdF9leWlPZVg5Ul91R1l1M043VGlBYVVuam5XNi1JTDAxRkdORWdfLTg1ZTZweGFfQmM5dzNpa2dKME9xWWtlXzZkSGFReTMxRmRwTFBXdFdKMzNUQlJRWDlZUDhKMWfSAZsBQVVfeXFMT1NvT2FfM1gxMW03SjI2TEV2M2tIRUNtZFU0NVJSZHRnb3JkRzFlUS05TjJpcUhyM21JMG9QSVJwdDJfYV9sX0dPdjJtMmJPVko0SVJOVk1iSkk0Sl9acDY2OHB4MU5LSmVvYnRYeFI0SGdzM2dPdkVKWUR4UHZ3ejRETGRvcjBtNUlmSlJtWTczcmsxS2VnWW8xNG8?oc=5",
+      "summary": "Woman, 38, arrested in Dudley after police discover social media posts Birmingham Live",
+      "publisher": "Birmingham Live",
+      "published": "2026-11-02T07:34:00+00:00",
+      "publishedDisplay": "2 Nov 2026"
+    },
+    {
+      "title": "Birmingham grooming gangs inquiry could expand across West Midlands",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZkJOU3NITy1DX0VIQ3ljZU1aRnRyMUxwaTdSd2F6RUFPU25TdmUtUUxhMG8xS1VTNk15eVVrUFRzRnF3Nm81N3VRY1ZzWHMzMzlRb3lweGtMZUlFNWQzY2RObkk0MkJFVk1iblFQNDBWU0JFQVhSdzRHRVJUMFB5VWhHT0VyRDBhN0o2Q2d5SHEzTDJJMmMxNTk5cHlFZy1wcXRXMjlQR3g?oc=5",
+      "summary": "Birmingham grooming gangs inquiry could expand across West Midlands Dudleynews.co.uk",
+      "publisher": "Dudleynews.co.uk",
+      "published": "2026-11-01T12:03:00+00:00",
+      "publishedDisplay": "1 Nov 2026"
+    },
+    {
+      "title": "Major change to West Midlands 999 calls as Raneem’s Law expands",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQdEI0UUEzOHppWm5BV2VncTVVZ3Z1aGVmb3hUcUV6UDRJemFYWU9UUW4yVXE1U0NVZHQxdXBPUFhORldYdHBVNUE3dWVtb3JtSXNidkxuLXIzb2dFV0FKX1paQ0NZS0FQd2FDcGlUZFRQUlU2b2pZTjdVNzEwN1lMNnVfUWoyRWM5NUJ2VDdDdWt2LXNvRUFKYXlpUmx3ZkRhZHc?oc=5",
+      "summary": "Major change to West Midlands 999 calls as Raneem’s Law expands Dudleynews.co.uk",
+      "publisher": "Dudleynews.co.uk",
+      "published": "2026-11-01T12:00:00+00:00",
+      "publishedDisplay": "1 Nov 2026"
+    },
+    {
+      "title": "Birmingham arrests after wads of cash seized in West Midlands 'brothel' raid",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQVEtUQTB1U0RMYWNfYzNDTC1XNXExQ0tHYzl3RjJfSHJoeHZqOERnckdFcGw5TUduU2lIYTczTjBFRGJGWHE5amZHaWVQNDFRcThTUTFoRXRoRkxSaDM3MEJ5eW5uemZLU1dMcHVhMVVOTjBYR2NXYTIwQ3I1bVJ0T3Y5RHhRdER5VGROZGt4UlpRRFNa0gGaAUFVX3lxTE5SbnAtaUF3QVBYT2M1SF8yUmlyclZPWEpSV1hJOWtWU19OTllkOWtNOW1udXMwZDVNTE1Qb3ZFalVLQURPUVlTc0dXcTRYdGNFamdDVUlodWpWYU84cEhfTnNoYXgtamh6Wl9IZmpjM2VEM2RMdVdOYVYxX1pIRXBSUHN0VHNGdklIamRDZTRTdkx6emFTYTVWaXc?oc=5",
+      "summary": "Birmingham arrests after wads of cash seized in West Midlands 'brothel' raid Birmingham Live",
+      "publisher": "Birmingham Live",
+      "published": "2026-10-31T15:02:00+00:00",
+      "publishedDisplay": "31 Oct 2026"
+    },
+    {
+      "title": "Two arrested and cash seized as police shut down suspected brothel in Wordsley High Street",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPTW9SVl84LXN0MFNnemNldEs3ME92Si1WWVN5OFhkZEcxanU4RzZGUG81Szh2b3h0a09BLXlTY1NRZEk1VmdsQ3JzTGU1blhWSE9xaDR5ZjhPeHJOa3ZCZDFodzdtbEJNeGtTQ3l6UFlMX3BwWW5XR1NYdjJFQmxrdy1rbHdiM3lIS1ZSRTdPMVNQZTdYSmFiTWtZaU1WYnZBbjdxY2Q5cXJJaEY4blFqZFJuX05kekxibjNFdzZyOHQ3NVljTWR2bTF4Z2hPTW8?oc=5",
+      "summary": "Two arrested and cash seized as police shut down suspected brothel in Wordsley High Street Express and Star",
+      "publisher": "Express and Star",
+      "published": "2026-10-31T14:36:00+00:00",
+      "publishedDisplay": "31 Oct 2026"
+    },
+    {
+      "title": "Car crashes into parked vehicles and fence in Sedgley before driver flees the scene",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNdWpPaUc3dlc1SlYyMDdQQzlYQ3VkeUk0UmFNSDFscjBYUWVVSDQ0UThXU1g0X3drbk1WNnliUDF3Y05FXzAxVldVbWNfbDM0dWpaOHk2bW45WTFuOWs4WVhiQ2VBUkd0NXJSQV9ybkl6NGZNRDJTTmp2aGhTVHlVYlJaYktPR3dqQ29BNVpNU2IxZzR0eGhGSkpxRm9Ja0R2ZnJXd0RUZFlnQjZCQ0FuNW5fUXF0VXpRYzVIa2NBYXp1OFJUNFE?oc=5",
+      "summary": "Car crashes into parked vehicles and fence in Sedgley before driver flees the scene Express and Star",
+      "publisher": "Express and Star",
+      "published": "2026-10-31T11:04:00+00:00",
+      "publishedDisplay": "31 Oct 2026"
+    },
+    {
+      "title": "Man dies after police called to 'concern for safety' near hospital",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcFVsVlo3ZExtek5hNEJ4ajBkQTFqRWVpckRFUk4tdFJ0LXh3VGVILUc0UnVobWVEbUZNMmZmQWdwNkJvLURwZjRvZ19pa2RrU2pLS0dWdEdEd3BuRnFqUUlBWTc4YTJ4dm8yNkhfSFNBQl84TlVidEEwSWZuMFNsVzZkbzV5UGY1enJjTklBdw?oc=5",
+      "summary": "Man dies after police called to 'concern for safety' near hospital Dudleynews.co.uk",
+      "publisher": "Dudleynews.co.uk",
+      "published": "2026-10-29T13:20:23+00:00",
+      "publishedDisplay": "29 Oct 2026"
+    }
+  ]
 }

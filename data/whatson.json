@@ -3,10 +3,579 @@
   "label": "In Parliament this week",
   "source": "UK Parliament What's On",
   "sourceUrl": "https://whatson.parliament.uk/commons/",
-  "status": "pending",
-  "retrieved": null,
-  "retrievedDisplay": null,
-  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
-  "lastError": "RuntimeError: https://whatson-api.parliament.uk/calendar/events/list.json failed: ProxyError: HTTPSConnectionPool(host='whatson-api.parliament.uk', port=443): Max retries exceeded with url: /calendar/events/list.json?queryParameters.startDate=2026-11-03&queryParameters.endDate=2026-11-10&queryParame",
-  "items": []
+  "status": "ok",
+  "retrieved": "2026-11-03T09:01:56.989146+00:00",
+  "retrievedDisplay": "3 November 2026, 09:01",
+  "lastAttempt": "2026-11-03T09:01:56.989146+00:00",
+  "days": [
+    {
+      "date": "2026-11-03",
+      "display": "Tuesday 3 November",
+      "events": [
+        {
+          "date": "2026-11-03",
+          "time": "",
+          "category": "Ten Minute Rule Motion",
+          "type": "Main Chamber",
+          "title": "Food labelling (halal and kosher meat)",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "",
+          "category": "Debate",
+          "type": "Main Chamber",
+          "title": "Conclusion of the Budget Debate",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "",
+          "category": "Adjournment",
+          "type": "Main Chamber",
+          "title": "Future of minibus drivers for community transport services",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "09:15",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "The Boothroyd Room, Portcullis House",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "09:25",
+          "category": "Debate",
+          "type": "General Committee",
+          "title": "General Committee",
+          "location": "Room 11, Palace of Westminster",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "09:25",
+          "category": "Debate",
+          "type": "General Committee",
+          "title": "General Committee",
+          "location": "Room 10, Palace of Westminster ",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "09:25",
+          "category": "Debate",
+          "type": "General Committee",
+          "title": "General Committee",
+          "location": "Room 12, Palace of Westminster",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "09:30",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "The Thatcher Room, Portcullis House",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "09:30",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "The Macmillan Room, Portcullis House",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "09:30",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "The Wilson Room, Portcullis House",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "09:30",
+          "category": "Westminster Hall debate",
+          "type": "Westminster Hall",
+          "title": "Findings of the Milburn Review into Young people and work: interim report",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "10:00",
+          "category": "Private Meeting",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "Room 5, Palace of Westminster",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "10:00",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "The Grimond Room, Portcullis House",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "11:00",
+          "category": "Westminster Hall debate",
+          "type": "Westminster Hall",
+          "title": "Prevention and public awareness of strangulation",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "11:30",
+          "category": "Private Meeting",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "Room 16, Palace of Westminster",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "11:30",
+          "category": "Oral questions",
+          "type": "Main Chamber",
+          "title": "HM Treasury (including Topical Questions)",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "12:30",
+          "category": "Private Meeting",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "Room 5, Palace of Westminster",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "13:30",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "The Wilson Room, Portcullis House",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "14:00",
+          "category": "Debate",
+          "type": "General Committee",
+          "title": "General Committee",
+          "location": "Room 11, Palace of Westminster",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "14:00",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "The Thatcher Room, Portcullis House",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "14:00",
+          "category": "Debate",
+          "type": "General Committee",
+          "title": "General Committee",
+          "location": "Room 10, Palace of Westminster ",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "14:00",
+          "category": "Debate",
+          "type": "General Committee",
+          "title": "General Committee",
+          "location": "Room 12, Palace of Westminster",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "14:00",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "The Grimond Room, Portcullis House",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "14:15",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "Room 8, Palace of Westminster",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-03",
+          "time": "14:30",
+          "category": "Debate",
+          "type": "General Committee",
+          "title": "General Committee",
+          "location": "Room 9, Palace of Westminster",
+          "involvesMp": false
+        }
+      ]
+    },
+    {
+      "date": "2026-11-04",
+      "display": "Wednesday 4 November",
+      "events": [
+        {
+          "date": "2026-11-04",
+          "time": "",
+          "category": "Ten Minute Rule Motion",
+          "type": "Main Chamber",
+          "title": "Fashion supply chain (code and adjudicator)",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "",
+          "category": "Legislation",
+          "type": "Main Chamber",
+          "title": "Sporting Events Bill: Remaining Stages",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "",
+          "category": "Legislation",
+          "type": "Main Chamber",
+          "title": "Railways Bill: Carry-over Motion",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "",
+          "category": "Legislation",
+          "type": "Main Chamber",
+          "title": "Cyber Security and Resilience (Network and Information Systems) Bill: Carry-over Motion",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "",
+          "category": "Adjournment",
+          "type": "Main Chamber",
+          "title": "Impact of new strategic licensing regulations on London",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "08:45",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "The Grimond Room, Portcullis House",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "09:00",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "Room 15, Palace of Westminster",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "09:00",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "Room 8, Palace of Westminster",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "09:00",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "Room 6, Palace of Westminster",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "09:00",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "The Wilson Room, Portcullis House",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "09:15",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "The Thatcher Room, Portcullis House",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "09:30",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "The Macmillan Room, Portcullis House",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "09:30",
+          "category": "Westminster Hall debate",
+          "type": "Westminster Hall",
+          "title": "Smart glasses and violence against women and girls",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "11:00",
+          "category": "Westminster Hall debate",
+          "type": "Westminster Hall",
+          "title": "Potential merits of a national lifelong learning strategy",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "11:30",
+          "category": "Oral questions",
+          "type": "Main Chamber",
+          "title": "Wales",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "12:00",
+          "category": "Prime Minister's Question Time",
+          "type": "Main Chamber",
+          "title": "Main Chamber",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "14:00",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "The Thatcher Room, Portcullis House",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "14:00",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "The Boothroyd Room, Portcullis House",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "14:00",
+          "category": "Oral evidence",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "The Grimond Room, Portcullis House",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "14:00",
+          "category": "Private Meeting",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "The Macmillan Room, Portcullis House",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "14:30",
+          "category": "Private Meeting",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "Room 8, Palace of Westminster",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "14:30",
+          "category": "Debate",
+          "type": "General Committee",
+          "title": "General Committee",
+          "location": "Room 9, Palace of Westminster",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "14:30",
+          "category": "Westminster Hall debate",
+          "type": "Westminster Hall",
+          "title": "Impact of heating oil prices on rural areas",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "16:00",
+          "category": "Westminster Hall debate",
+          "type": "Westminster Hall",
+          "title": "Police powers for tackling the use of illegal off-road bikes in the North East",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-04",
+          "time": "16:30",
+          "category": "Westminster Hall debate",
+          "type": "Westminster Hall",
+          "title": "Potholes and road maintenance in Suffolk",
+          "location": "",
+          "involvesMp": false
+        }
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "display": "Tuesday 10 November",
+      "events": [
+        {
+          "date": "2026-11-10",
+          "time": "",
+          "category": "Ten Minute Rule Motion",
+          "type": "Main Chamber",
+          "title": "That leave be given to bring in a Bill under SO No. 23 [details to be provided].",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-10",
+          "time": "",
+          "category": "Legislation",
+          "type": "Main Chamber",
+          "title": "Financial Services and Markets Bill [HL]: Second Reading",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-10",
+          "time": "",
+          "category": "Adjournment",
+          "type": "Main Chamber",
+          "title": "Access to dental care in the East of England",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-10",
+          "time": "11:30",
+          "category": "Westminster Hall debate",
+          "type": "Westminster Hall",
+          "title": "The matter of anti-social behaviour",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-10",
+          "time": "14:00",
+          "category": "Private Meeting",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "TBC",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-10",
+          "time": "14:30",
+          "category": "Oral questions",
+          "type": "Main Chamber",
+          "title": "Justice (including Topical Questions)",
+          "location": "",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-10",
+          "time": "15:00",
+          "category": "Private Meeting",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "Copenhagen",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-10",
+          "time": "16:00",
+          "category": "Private Meeting",
+          "type": "Select & Joint Committees",
+          "title": "Select & Joint Committees",
+          "location": "To be confirmed",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-10",
+          "time": "18:00",
+          "category": "Private Meeting",
+          "type": "General Committee",
+          "title": "General Committee",
+          "location": "Room 11, Palace of Westminster",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-10",
+          "time": "18:00",
+          "category": "Debate",
+          "type": "General Committee",
+          "title": "General Committee",
+          "location": "Room 9, Palace of Westminster",
+          "involvesMp": false
+        },
+        {
+          "date": "2026-11-10",
+          "time": "18:00",
+          "category": "Debate",
+          "type": "General Committee",
+          "title": "General Committee",
+          "location": "Room 12, Palace of Westminster",
+          "involvesMp": false
+        }
+      ]
+    }
+  ],
+  "count": 67,
+  "note": ""
 }

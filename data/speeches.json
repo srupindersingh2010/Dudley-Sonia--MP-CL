@@ -3,10 +3,152 @@
   "label": "Speeches",
   "source": "Hansard API",
   "sourceUrl": "https://hansard.parliament.uk/search/MemberContributions?memberId=5274",
-  "status": "pending",
-  "retrieved": null,
-  "retrievedDisplay": null,
-  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
-  "lastError": "RuntimeError: https://hansard-api.parliament.uk/search/contributions/Spoken.json failed: ProxyError: HTTPSConnectionPool(host='hansard-api.parliament.uk', port=443): Max retries exceeded with url: /search/contributions/Spoken.json?queryParameters.memberId=5274&queryParameters.take=20&queryParameters",
-  "items": []
+  "status": "ok",
+  "retrieved": "2026-11-03T09:01:56.989146+00:00",
+  "retrievedDisplay": "3 November 2026, 09:01",
+  "lastAttempt": "2026-11-03T09:01:56.989146+00:00",
+  "items": [
+    {
+      "date": "2026-11-02",
+      "dateDisplay": "2 Nov 2026",
+      "debate": "High Street Regeneration: Dudley",
+      "excerpt": "Dudley high street has enormous potential to thrive and prosper once again, yet years of inaction from the Conservative-led council has left too many empty shops and too many businesses struggling. Will my right hon. Friend outline what steps the Labour Government are taking to r…",
+      "url": "https://hansard.parliament.uk/Commons/2026-11-02/debates/5AF7B8C9-505C-48C2-BEC7-BAAD1E2DD67A/Debate#contribution-E1A70875-86DD-4BED-AA0D-EED68D1FFBEA"
+    },
+    {
+      "date": "2026-11-02",
+      "dateDisplay": "2 Nov 2026",
+      "debate": "High Street Regeneration: Dudley",
+      "excerpt": "10. What steps she is taking to help regenerate Dudley high street.",
+      "url": "https://hansard.parliament.uk/Commons/2026-11-02/debates/5AF7B8C9-505C-48C2-BEC7-BAAD1E2DD67A/Debate#contribution-380276DF-62D1-41F9-B154-09B4FA142EF7"
+    },
+    {
+      "date": "2026-10-26",
+      "dateDisplay": "26 Oct 2026",
+      "debate": "Topical Questions",
+      "excerpt": "The police funding formula disadvantages towns such as Dudley. We know that visible policing in town centres is essential when rebuilding public trust. Does my right hon. Friend agree that the formula needs updating to deliver fairer funding to Dudley, and that residents in St Ja…",
+      "url": "https://hansard.parliament.uk/Commons/2026-10-26/debates/2B2AA6A1-427E-409D-B498-AC13323B1A92/Debate#contribution-FE87160B-CE0E-4DD6-AA92-83C95FA2EFB7"
+    },
+    {
+      "date": "2026-10-22",
+      "dateDisplay": "22 Oct 2026",
+      "debate": " Business of the House",
+      "excerpt": "Adam Bradley and James Bragg have opened the Forge youth centre in Dudley town centre, investing their own money, backed by the Government’s Pride in Place funding. That fantastic facility will help young people build skills, gain work and form lifelong relationships. Will the Le…",
+      "url": "https://hansard.parliament.uk/Commons/2026-10-22/debates/B3153003-E558-4391-9844-FE89EE2971A1/Debate#contribution-3C3E26F8-6682-4F3B-9B03-39FC3CF827AA"
+    },
+    {
+      "date": "2026-10-19",
+      "dateDisplay": "19 Oct 2026",
+      "debate": "Procurement: Dudley",
+      "excerpt": "I wholeheartedly support the Government’s ambition to buy British, and there should be no difference in defence. I take this opportunity to thank the Minister for his defence roundtable being held in Dudley later this year. Can my hon. Friend outline what proactive work has been …",
+      "url": "https://hansard.parliament.uk/Commons/2026-10-19/debates/2A24F44A-37FA-4282-B4B1-CCAC420DBB25/Debate#contribution-E61B2947-3489-4D8D-9FB9-93ABB8003D91"
+    },
+    {
+      "date": "2026-10-19",
+      "dateDisplay": "19 Oct 2026",
+      "debate": "Procurement: Dudley",
+      "excerpt": "9. What steps he is taking to support defence procurement companies in Dudley.",
+      "url": "https://hansard.parliament.uk/Commons/2026-10-19/debates/2A24F44A-37FA-4282-B4B1-CCAC420DBB25/Debate#contribution-E1F661EE-B3C7-4530-8EC3-E95DC8CBBDCD"
+    },
+    {
+      "date": "2026-10-15",
+      "dateDisplay": "15 Oct 2026",
+      "debate": " Business of the House",
+      "excerpt": "The month, the historic UNESCO Wren’s Nest celebrates 70 years. Will my right hon. Friend join me in thanking the Friends of Wren’s Nest, such as Paul Floyd, geologist Graham Worton and others who ensure that the 420-million-year-old treasures are protected for the next generatio…",
+      "url": "https://hansard.parliament.uk/Commons/2026-10-15/debates/524D5B7F-8BE9-432D-9DEB-90E4302A691E/Debate#contribution-14675754-8714-4905-91D6-32D873FF6F24"
+    },
+    {
+      "date": "2026-10-13",
+      "dateDisplay": "13 Oct 2026",
+      "debate": "Cold Homes Plan",
+      "excerpt": "This summer, extreme heat was responsible for thousands of excess deaths across the United Kingdom. Though I commend the Department’s mission to tackle climate change and the root causes of extreme heat, does the Minister recognise that we must go faster and further in adapting a…",
+      "url": "https://hansard.parliament.uk/Commons/2026-10-13/debates/CF9E5F33-DEA6-49C7-8B26-EA42FD81B807/Debate#contribution-1F64E8E8-CD8C-411E-A556-9FC6B9A1EC50"
+    },
+    {
+      "date": "2026-10-13",
+      "dateDisplay": "13 Oct 2026",
+      "debate": "Cold Homes Plan",
+      "excerpt": "12. Whether her Department is taking steps to implement a cold homes plan.",
+      "url": "https://hansard.parliament.uk/Commons/2026-10-13/debates/CF9E5F33-DEA6-49C7-8B26-EA42FD81B807/Debate#contribution-8F43E022-178D-47A7-B8BC-87AA0FEE13CB"
+    },
+    {
+      "date": "2026-09-14",
+      "dateDisplay": "14 Sep 2026",
+      "debate": "Pupils with SEND: Mainstream Schools",
+      "excerpt": "Dudley cannot afford to lose another generation of young people to unemployment, exclusion or missed opportunity. The rate of our young people not in education, employment or training was recognised in Alan Milburn’s review. Local leaders at my February NEETs roundtable were clea…",
+      "url": "https://hansard.parliament.uk/Commons/2026-09-14/debates/1D5D48E5-58BE-4539-B613-71059E23E6FA/Debate#contribution-6E85282C-AE0A-4674-BF76-8BE57790F0DD"
+    },
+    {
+      "date": "2026-09-08",
+      "dateDisplay": "8 Sep 2026",
+      "debate": "Israel and Palestine",
+      "excerpt": "I welcome the statement condemning the E1 settlement project in the west bank and the sanctions. With that in mind, we must think of the Palestinians who are directly impacted and prevented from accessing basic health care; ambulances are being stopped from taking acutely unwell …",
+      "url": "https://hansard.parliament.uk/Commons/2026-09-08/debates/B9E48476-ADE4-4D56-8EA8-F76BBFF188E8/Debate#contribution-D11715D6-2370-4D92-9C81-C98E5D5D8B46"
+    },
+    {
+      "date": "2026-09-07",
+      "dateDisplay": "7 Sep 2026",
+      "debate": "Topical Questions",
+      "excerpt": "T5. The inspection by the BBA—the British Board of Agrément—at Goodrich Mews in Dudley confirmed that the retaining wall installed by the Keller Phi Group will not have met the criteria that must be met if it is to have the stated service life, and it needs emergency repair. The …",
+      "url": "https://hansard.parliament.uk/Commons/2026-09-07/debates/F372C09B-AD8F-487D-B29C-F76ABAD97106/Debate#contribution-D3091269-91D3-4A98-9057-6C44CA6300F6"
+    },
+    {
+      "date": "2026-09-03",
+      "dateDisplay": "3 Sep 2026",
+      "debate": "Community Cohesion",
+      "excerpt": "One of the Church’s greatest strengths is its ability to bring communities together. At a time of heightened community tensions, opportunities to bring all faith leaders together are ever more important. Over the summer, I worked closely with local faith leaders in my constituenc…",
+      "url": "https://hansard.parliament.uk/Commons/2026-09-03/debates/B20D1C09-5725-42B6-A9B8-E7881506D350/Debate#contribution-D50CAEEB-95B1-4E19-9CCA-BC5EF160544F"
+    },
+    {
+      "date": "2026-09-03",
+      "dateDisplay": "3 Sep 2026",
+      "debate": "Community Cohesion",
+      "excerpt": "9. What steps the Church of England is taking to work with other faith groups to promote community cohesion.",
+      "url": "https://hansard.parliament.uk/Commons/2026-09-03/debates/B20D1C09-5725-42B6-A9B8-E7881506D350/Debate#contribution-CB18F477-EBEF-4B71-ADBC-4900E2B56F76"
+    },
+    {
+      "date": "2026-07-16",
+      "dateDisplay": "16 Jul 2026",
+      "debate": " Business of the House",
+      "excerpt": "GMB union members at Glen Dimplex in my constituency have been on strike for five weeks over proposed workload changes. This week, after showing remarkable grit, they secured a return to the status quo while negotiations continue. Will the Leader of the House provide Government t…",
+      "url": "https://hansard.parliament.uk/Commons/2026-07-16/debates/7214B6AD-D715-43A5-8E7D-41E27BCBB509/Debate#contribution-15834E8B-0015-415E-80B2-E9B9D8A46A62"
+    },
+    {
+      "date": "2026-07-16",
+      "dateDisplay": "16 Jul 2026",
+      "debate": "Topical Questions",
+      "excerpt": "I am delighted that the midlands metro tram line will connect Dudley with the rest of the west midlands. However, the construction has caused disruption to local businesses such as the Dubliner’s, and repeated delays have exacerbated that. What support can the Minister provide to…",
+      "url": "https://hansard.parliament.uk/Commons/2026-07-16/debates/4AB9C786-9BA4-4DCC-AD32-DB4469B94E0F/Debate#contribution-B58587E2-CBF6-4692-B94A-305208CB11FD"
+    },
+    {
+      "date": "2026-07-09",
+      "dateDisplay": "9 Jul 2026",
+      "debate": " Business of the House",
+      "excerpt": "Black Country Day is on 14 July, and we have a lot to celebrate. The Black Country was the heart of the industrial revolution, we have Dudley castle and the Wren’s Nest nature reserve, where people can pick up a fossil—and, of course, we can celebrate the people of the Black Coun…",
+      "url": "https://hansard.parliament.uk/Commons/2026-07-09/debates/7D1C451C-563A-49E5-95BE-4F1EDECA7B69/Debate#contribution-63C2F08F-A26D-4F83-9677-AB23B4D2A453"
+    },
+    {
+      "date": "2026-07-09",
+      "dateDisplay": "9 Jul 2026",
+      "debate": "Iran Conflict: Ceasefire",
+      "excerpt": "Does my hon. Friend agree that among the geopolitical military strategy and the diplomatic negotiations surrounding the conflict, we must not lose sight of the millions of innocent civilians across the region who are trapped in the middle of violence, displaced from their homes, …",
+      "url": "https://hansard.parliament.uk/Commons/2026-07-09/debates/AC51936F-AA19-4F2A-A221-1ACAFE660E66/Debate#contribution-ED9DA4A2-4088-4373-8961-7EE0FE79566F"
+    },
+    {
+      "date": "2026-07-07",
+      "dateDisplay": "7 Jul 2026",
+      "debate": "Topical Questions",
+      "excerpt": "The UK’s green economy is worth more than £100 billion a year, and nearly half a trillion pounds in investment is in the pipeline. What steps is the Minister taking to ensure that the contracts that his Department provides prioritise British firms and British jobs, so that we can…",
+      "url": "https://hansard.parliament.uk/Commons/2026-07-07/debates/A0FD7BE8-446E-4DF5-8ECD-7D34BFC83068/Debate#contribution-114B5861-842E-4FBF-B171-BF8CF109E9EC"
+    },
+    {
+      "date": "2026-06-30",
+      "dateDisplay": "30 Jun 2026",
+      "debate": "Defence Investment Plan",
+      "excerpt": "Modern warfare has evolved from traditional mass troops to online cyber-attacks and drone-enabled conflict. We have seen that with the attacks on M&S and Jaguar Land Rover, and last September I saw it at first hand when I visited a drone factory in Ukraine. How is our Government …",
+      "url": "https://hansard.parliament.uk/Commons/2026-06-30/debates/6429FB20-1CA0-4360-A188-E551FBD5728A/Debate#contribution-DBB3EA8B-2FA5-4A93-A18A-F28C3959BAF6"
+    }
+  ],
+  "total": 199,
+  "allUrl": "https://hansard.parliament.uk/search/MemberContributions?memberId=5274"
 }

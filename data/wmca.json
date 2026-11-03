@@ -3,10 +3,53 @@
   "label": "WMCA meetings",
   "source": "WMCA governance calendar",
   "sourceUrl": "https://governance.wmca.org.uk/mgCalendarMonthView.aspx",
-  "status": "pending",
-  "retrieved": null,
-  "retrievedDisplay": null,
-  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
-  "lastError": "RuntimeError: no ModernGov calendar reachable at: https://governance.wmca.org.uk, https://wmca.moderngov.co.uk",
-  "items": []
+  "status": "ok",
+  "retrieved": "2026-11-03T09:01:56.989146+00:00",
+  "retrievedDisplay": "3 November 2026, 09:01",
+  "lastAttempt": "2026-11-03T09:01:56.989146+00:00",
+  "items": [
+    {
+      "date": "2026-11-10",
+      "dateDisplay": "Tue 10 Nov",
+      "time": "10.00 am",
+      "title": "Employment Committee",
+      "url": "https://governance.wmca.org.uk/ieListDocuments.aspx?CId=155&MId=2455",
+      "key": "2455"
+    },
+    {
+      "date": "2026-11-13",
+      "dateDisplay": "Fri 13 Nov",
+      "time": "11.00 am",
+      "title": "WMCA Board",
+      "url": "https://governance.wmca.org.uk/ieListDocuments.aspx?CId=137&MId=2150",
+      "key": "2150"
+    },
+    {
+      "date": "2026-11-16",
+      "dateDisplay": "Mon 16 Nov",
+      "time": "10.00 am",
+      "title": "Investment Board",
+      "url": "https://governance.wmca.org.uk/ieListDocuments.aspx?CId=135&MId=2141",
+      "key": "2141"
+    },
+    {
+      "date": "2026-11-17",
+      "dateDisplay": "Tue 17 Nov",
+      "time": "10.00 am",
+      "title": "Audit, Risk & Assurance Committee",
+      "url": "https://governance.wmca.org.uk/ieListDocuments.aspx?CId=136&MId=2270",
+      "key": "2270"
+    },
+    {
+      "date": "2026-11-30",
+      "dateDisplay": "Mon 30 Nov",
+      "time": "10.00 am",
+      "title": "Local Scrutiny Committee",
+      "url": "https://governance.wmca.org.uk/ieListDocuments.aspx?CId=356&MId=2286",
+      "key": "2286"
+    }
+  ],
+  "system": "https://governance.wmca.org.uk",
+  "calendarUrl": "https://governance.wmca.org.uk/mgCalendarMonthView.aspx",
+  "note": ""
 }

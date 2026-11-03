@@ -3,10 +3,149 @@
   "label": "MP profile & roles",
   "source": "UK Parliament Members API",
   "sourceUrl": "https://members.parliament.uk/member/5274",
-  "status": "pending",
-  "retrieved": null,
-  "retrievedDisplay": null,
-  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
-  "lastError": "RuntimeError: https://members-api.parliament.uk/api/Members/5274 failed: ProxyError: HTTPSConnectionPool(host='members-api.parliament.uk', port=443): Max retries exceeded with url: /api/Members/5274 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden'",
-  "items": []
+  "status": "ok",
+  "retrieved": "2026-11-03T09:01:56.989146+00:00",
+  "retrievedDisplay": "3 November 2026, 09:01",
+  "lastAttempt": "2026-11-03T09:01:56.989146+00:00",
+  "name": "Sonia Kumar",
+  "party": "Labour",
+  "constituency": "Dudley",
+  "memberSince": "2024-07-04",
+  "memberSinceDisplay": "4 Jul 2024",
+  "memberStatus": "Current Member",
+  "profileUrl": "https://members.parliament.uk/member/5274",
+  "synopsis": "Sonia Kumar is the Labour MP for Dudley , and has been an MP continually since 4 July 2024.",
+  "election": {
+    "name": "2024 General Election",
+    "date": "2024-07-04",
+    "majority": 1900,
+    "electorate": 70151,
+    "turnout": 35796,
+    "result": "Lab Gain",
+    "candidates": [
+      {
+        "name": "Sonia Kumar",
+        "party": "Labour",
+        "votes": 12215,
+        "share": 0.3412392446083361
+      },
+      {
+        "name": "Marco Longhi",
+        "party": "Conservative",
+        "votes": 10315,
+        "share": 0.2881606883450665
+      },
+      {
+        "name": "Andrew Southall",
+        "party": "Reform UK",
+        "votes": 9442,
+        "share": 0.2637724885462063
+      },
+      {
+        "name": "Zia Qari",
+        "party": "Green Party",
+        "votes": 1154,
+        "share": 0.03223823890937535
+      },
+      {
+        "name": "Ian Flynn",
+        "party": "Liberal Democrat",
+        "votes": 1056,
+        "share": 0.02950050284948039
+      },
+      {
+        "name": "Shakeela Bibi",
+        "party": "Independent",
+        "votes": 857,
+        "share": 0.02394122248295899
+      },
+      {
+        "name": "Aftab Hussain",
+        "party": "Workers Party of Britain",
+        "votes": 621,
+        "share": 0.01734830707341602
+      },
+      {
+        "name": "Dharmanand Mortha",
+        "party": "Independent",
+        "votes": 136,
+        "share": 0.003799307185160353
+      }
+    ]
+  },
+  "pastCommittees": [
+    {
+      "name": "Business, Innovation, Science and Trade Committee",
+      "from": "21 Oct 2024",
+      "to": "13 Apr 2026"
+    },
+    {
+      "name": "Terrorism (Protection of Premises) Bill: Programming sub committee",
+      "from": "23 Oct 2024",
+      "to": "31 Oct 2024"
+    },
+    {
+      "name": "Terrorism (Protection of Premises) Bill",
+      "from": "23 Oct 2024",
+      "to": "31 Oct 2024"
+    },
+    {
+      "name": "Data (Use and Access) Bill [HL]",
+      "from": "26 Feb 2025",
+      "to": "11 Mar 2025"
+    },
+    {
+      "name": "Business, Innovation, Science and Trade Sub-Committee on Economic Security, Arms and Export Controls",
+      "from": "5 Mar 2025",
+      "to": "13 May 2026"
+    }
+  ],
+  "roles": [],
+  "contacts": [
+    {
+      "type": "Parliamentary office",
+      "line1": "House of Commons",
+      "line2": "London",
+      "postcode": "SW1A 0AA",
+      "phone": null,
+      "email": "sonia.kumar.mp@parliament.uk",
+      "web": null
+    },
+    {
+      "type": "Constituency office",
+      "line1": "Constituency office",
+      "line2": null,
+      "postcode": null,
+      "phone": "01384 885959",
+      "email": null,
+      "web": null
+    },
+    {
+      "type": "Facebook",
+      "line1": "https://www.facebook.com/SoniaKumarMP",
+      "line2": null,
+      "postcode": null,
+      "phone": null,
+      "email": null,
+      "web": "https://www.facebook.com/SoniaKumarMP"
+    },
+    {
+      "type": "Instagram",
+      "line1": "https://www.instagram.com/soniakumarmp/",
+      "line2": null,
+      "postcode": null,
+      "phone": null,
+      "email": null,
+      "web": "https://www.instagram.com/soniakumarmp/"
+    },
+    {
+      "type": "LinkedIn",
+      "line1": "https://www.linkedin.com/company/soniakumarmp/",
+      "line2": null,
+      "postcode": null,
+      "phone": null,
+      "email": null,
+      "web": "https://www.linkedin.com/company/soniakumarmp/"
+    }
+  ]
 }

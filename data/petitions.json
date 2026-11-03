@@ -3,10 +3,132 @@
   "label": "Petitions",
   "source": "UK Parliament Petitions",
   "sourceUrl": "https://petition.parliament.uk/petitions",
-  "status": "pending",
-  "retrieved": null,
-  "retrievedDisplay": null,
-  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
-  "lastError": "RuntimeError: https://petition.parliament.uk/petitions.json failed: ProxyError: HTTPSConnectionPool(host='petition.parliament.uk', port=443): Max retries exceeded with url: /petitions.json?state=open&page=1 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Fo",
-  "items": []
+  "status": "ok",
+  "retrieved": "2026-11-03T09:01:56.989146+00:00",
+  "retrievedDisplay": "3 November 2026, 09:01",
+  "lastAttempt": "2026-11-03T09:01:56.989146+00:00",
+  "items": [
+    {
+      "id": 780269,
+      "title": "Reduce the state pension age to 65 for all",
+      "local": 164,
+      "total": 111929,
+      "state": "open",
+      "response": true,
+      "debate": false,
+      "url": "https://petition.parliament.uk/petitions/780269"
+    },
+    {
+      "id": 773633,
+      "title": "Launch a public inquiry into illegal migration in the UK",
+      "local": 149,
+      "total": 86654,
+      "state": "open",
+      "response": true,
+      "debate": false,
+      "url": "https://petition.parliament.uk/petitions/773633"
+    },
+    {
+      "id": 769589,
+      "title": "End the mandatory fortification of white flour with folic acid immediately",
+      "local": 130,
+      "total": 126512,
+      "state": "open",
+      "response": true,
+      "debate": false,
+      "url": "https://petition.parliament.uk/petitions/769589"
+    },
+    {
+      "id": 769616,
+      "title": "Provide lifelong vet care and financial support for retired service animals",
+      "local": 97,
+      "total": 55605,
+      "state": "open",
+      "response": true,
+      "debate": false,
+      "url": "https://petition.parliament.uk/petitions/769616"
+    },
+    {
+      "id": 779519,
+      "title": "Reduce the retirement age for the NHS pension scheme to 60",
+      "local": 85,
+      "total": 46437,
+      "state": "open",
+      "response": true,
+      "debate": false,
+      "url": "https://petition.parliament.uk/petitions/779519"
+    },
+    {
+      "id": 777710,
+      "title": "Make catapult attacks against animals a standalone criminal offence",
+      "local": 75,
+      "total": 74668,
+      "state": "open",
+      "response": true,
+      "debate": false,
+      "url": "https://petition.parliament.uk/petitions/777710"
+    },
+    {
+      "id": 779259,
+      "title": "Make statutory maternity pay 90% of wage for first 12 weeks & minimum wage after",
+      "local": 69,
+      "total": 80077,
+      "state": "open",
+      "response": true,
+      "debate": false,
+      "url": "https://petition.parliament.uk/petitions/779259"
+    },
+    {
+      "id": 778453,
+      "title": "Require asylum seekers & foreign criminals to be detained on remote UK islands",
+      "local": 66,
+      "total": 32007,
+      "state": "open",
+      "response": false,
+      "debate": false,
+      "url": "https://petition.parliament.uk/petitions/778453"
+    },
+    {
+      "id": 777325,
+      "title": "Fund second stem cell transplants on NHS for relapse within 12 months",
+      "local": 62,
+      "total": 37788,
+      "state": "open",
+      "response": true,
+      "debate": false,
+      "url": "https://petition.parliament.uk/petitions/777325"
+    },
+    {
+      "id": 769319,
+      "title": "Fund £20,000 a year (term time) wage for Teaching Assistants",
+      "local": 56,
+      "total": 40090,
+      "state": "open",
+      "response": true,
+      "debate": false,
+      "url": "https://petition.parliament.uk/petitions/769319"
+    },
+    {
+      "id": 779299,
+      "title": "Reinstate mandatory warning before seizing a vehicle for anti-social driving",
+      "local": 52,
+      "total": 41472,
+      "state": "open",
+      "response": false,
+      "debate": false,
+      "url": "https://petition.parliament.uk/petitions/779299"
+    },
+    {
+      "id": 767687,
+      "title": "Hold a UK-wide briefing on climate and nature risks",
+      "local": 50,
+      "total": 134141,
+      "state": "open",
+      "response": true,
+      "debate": false,
+      "url": "https://petition.parliament.uk/petitions/767687"
+    }
+  ],
+  "checked": 25,
+  "note": "Ranked by signatures from people who gave a postcode in the Dudley constituency. Based on the 80 most-signed open petitions."
 }
