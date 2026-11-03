@@ -4,72 +4,72 @@
   "source": "data.police.uk (Home Office open data)",
   "sourceUrl": "https://www.police.uk/pu/your-area/west-midlands-police/",
   "status": "ok",
-  "retrieved": "2026-11-03T09:09:20.868214+00:00",
-  "retrievedDisplay": "3 November 2026, 09:09",
-  "lastAttempt": "2026-11-03T09:09:20.868214+00:00",
+  "retrieved": "2026-11-03T09:13:51.770686+00:00",
+  "retrievedDisplay": "3 November 2026, 09:13",
+  "lastAttempt": "2026-11-03T09:13:51.770686+00:00",
   "month": "2026-08",
   "monthDisplay": "August 2026",
-  "total": 1392,
+  "total": 1190,
   "categories": [
     {
       "category": "Violence & sexual offences",
       "slug": "violent-crime",
-      "count": 546
+      "count": 460
     },
     {
       "category": "Shoplifting",
       "slug": "shoplifting",
-      "count": 151
+      "count": 122
     },
     {
       "category": "Criminal damage & arson",
       "slug": "criminal-damage-arson",
-      "count": 121
+      "count": 107
     },
     {
       "category": "Vehicle crime",
       "slug": "vehicle-crime",
-      "count": 117
+      "count": 101
     },
     {
       "category": "Public order",
       "slug": "public-order",
-      "count": 103
+      "count": 88
     },
     {
       "category": "Other theft",
       "slug": "other-theft",
-      "count": 95
+      "count": 80
     },
     {
       "category": "Burglary",
       "slug": "burglary",
-      "count": 76
+      "count": 64
     },
     {
       "category": "Anti-social behaviour",
       "slug": "anti-social-behaviour",
-      "count": 46
+      "count": 41
     },
     {
       "category": "Possession of weapons",
       "slug": "possession-of-weapons",
-      "count": 38
+      "count": 33
     },
     {
       "category": "Drugs",
       "slug": "drugs",
-      "count": 31
+      "count": 30
     },
     {
       "category": "Other crime",
       "slug": "other-crime",
-      "count": 29
+      "count": 26
     },
     {
       "category": "Robbery",
       "slug": "robbery",
-      "count": 24
+      "count": 23
     },
     {
       "category": "Theft from the person",
@@ -105,7 +105,7 @@
     },
     {
       "month": "August 2026",
-      "count": 1392
+      "count": 1190
     }
   ],
   "teams": [
@@ -503,7 +503,7 @@
           "address": "Royal British Legion Summerhill Kingswinford"
         }
       ],
-      "crimesLatest": 202
+      "crimesLatest": 0
     }
   ],
   "note": "Crime figures are for the police neighbourhoods that cover the Dudley constituency, whose boundaries do not exactly match the constituency. Locations on the map are approximate (snapped to nearby points to protect privacy). Data.police.uk publishes monthly, usually about two months behind."

@@ -4,9 +4,9 @@
   "source": "ONS via Nomis",
   "sourceUrl": "https://www.nomisweb.co.uk/",
   "status": "ok",
-  "retrieved": "2026-11-03T09:09:20.868214+00:00",
-  "retrievedDisplay": "3 November 2026, 09:09",
-  "lastAttempt": "2026-11-03T09:09:20.868214+00:00",
+  "retrieved": "2026-11-03T09:13:51.770686+00:00",
+  "retrievedDisplay": "3 November 2026, 09:13",
+  "lastAttempt": "2026-11-03T09:13:51.770686+00:00",
   "stats": [
     {
       "group": "Work & benefits",
@@ -33,39 +33,34 @@
       "title": "Economic activity, residents 16+ (Census 2021)",
       "bars": [
         {
-          "label": "Economically active (excluding full-time students)",
-          "local": 57.0,
-          "england": 58.6
-        },
-        {
-          "label": "Economically active (excluding full-time students):In employment",
+          "label": "In employment",
           "local": 53.3,
           "england": 55.7
         },
         {
-          "label": "Economically active (excluding full-time students):In employment:Employee",
-          "local": 46.0,
-          "england": 46.2
-        },
-        {
-          "label": "Economically inactive",
-          "local": 41.3,
-          "england": 39.1
-        },
-        {
-          "label": "Economically active (excluding full-time students): In employment: Employee: Full-time",
-          "local": 33.3,
-          "england": 34.3
-        },
-        {
-          "label": "Economically inactive: Retired",
+          "label": "Retired",
           "local": 21.4,
           "england": 21.5
         },
         {
-          "label": "Economically active (excluding full-time students): In employment: Employee: Part-time",
-          "local": 12.7,
-          "england": 11.9
+          "label": "Looking after home or family",
+          "local": 6.2,
+          "england": 4.8
+        },
+        {
+          "label": "Long-term sick or disabled",
+          "local": 5.5,
+          "england": 4.1
+        },
+        {
+          "label": "Student",
+          "local": 4.5,
+          "england": 5.6
+        },
+        {
+          "label": "Unemployed",
+          "local": 3.7,
+          "england": 2.9
         }
       ],
       "dataset": "NM_2083_1",
@@ -73,8 +68,8 @@
     }
   ],
   "notes": [
-    "TS037: NM_2055_1: no 2024 constituency geography",
-    "TS054: NM_2072_1: no 2024 constituency geography"
+    "TS037: TS037: NM_2092_1: no 2024 constituency geography",
+    "TS054: TS054: NM_2072_1: no 2024 constituency geography"
   ],
   "libraryUrl": "https://commonslibrary.parliament.uk/constituency-dashboards/"
 }
