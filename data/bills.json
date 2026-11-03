@@ -2,213 +2,23 @@
   "key": "bills",
   "label": "Bills",
   "source": "Bills API",
-  "sourceUrl": "https://bills.parliament.uk/?SponsorMemberId=5274",
+  "sourceUrl": "https://bills.parliament.uk/?SearchTerm=&Member=5274",
   "status": "ok",
-  "retrieved": "2026-11-03T09:01:56.989146+00:00",
-  "retrievedDisplay": "3 November 2026, 09:01",
-  "lastAttempt": "2026-11-03T09:01:56.989146+00:00",
+  "retrieved": "2026-11-03T09:09:20.868214+00:00",
+  "retrievedDisplay": "3 November 2026, 09:09",
+  "lastAttempt": "2026-11-03T09:09:20.868214+00:00",
   "items": [
     {
-      "id": 4080,
-      "title": "Representation of the People Bill",
-      "stage": "Committee stage",
-      "house": "Lords",
-      "updated": "3 Nov 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4080"
-    },
-    {
-      "id": 4035,
-      "title": "Cyber Security and Resilience (Network and Information Systems) Bill",
-      "stage": "3rd reading",
-      "house": "Lords",
-      "updated": "3 Nov 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4035"
-    },
-    {
-      "id": 4126,
-      "title": "Social Housing Bill [HL]",
-      "stage": "Committee stage",
-      "house": "Commons",
-      "updated": "2 Nov 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4126"
-    },
-    {
-      "id": 4127,
-      "title": "Sporting Events Bill [HL]",
-      "stage": "Report stage",
-      "house": "Commons",
-      "updated": "2 Nov 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4127"
-    },
-    {
-      "id": 4254,
-      "title": "Immigration and Asylum Bill",
-      "stage": "Committee stage",
-      "house": "Commons",
-      "updated": "2 Nov 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4254"
-    },
-    {
-      "id": 4290,
-      "title": "Highways (Financing) Bill",
-      "stage": "Committee stage",
-      "house": "Commons",
-      "updated": "2 Nov 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4290"
-    },
-    {
-      "id": 4280,
-      "title": "Sovereign Grant Act",
-      "stage": "Royal Assent",
-      "house": "Unassigned",
-      "updated": "2 Nov 2026",
-      "act": true,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4280"
-    },
-    {
-      "id": 4124,
-      "title": "Health Bill",
-      "stage": "Committee stage",
-      "house": "Lords",
-      "updated": "2 Nov 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4124"
-    },
-    {
-      "id": 4305,
-      "title": "Building Safety (Remediation of Unsafe Cladding etc) Bill",
-      "stage": "Committee stage",
-      "house": "Commons",
-      "updated": "2 Nov 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4305"
-    },
-    {
-      "id": 4129,
-      "title": "Financial Services and Markets Bill [HL]",
+      "id": 4038,
+      "title": "Access to Finance for Women in Business Bill",
       "stage": "2nd reading",
       "house": "Commons",
-      "updated": "2 Nov 2026",
+      "updated": "30 Apr 2026",
       "act": false,
       "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4129"
-    },
-    {
-      "id": 4030,
-      "title": "Railways Bill",
-      "stage": "Report stage",
-      "house": "Lords",
-      "updated": "30 Oct 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4030"
-    },
-    {
-      "id": 4135,
-      "title": "House of Lords (Alternative Second Chamber) Bill [HL]",
-      "stage": "Committee stage",
-      "house": "Lords",
-      "updated": "30 Oct 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4135"
-    },
-    {
-      "id": 4083,
-      "title": "Courts and Tribunals Bill",
-      "stage": "Committee stage",
-      "house": "Lords",
-      "updated": "30 Oct 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4083"
-    },
-    {
-      "id": 3897,
-      "title": "Malvern Hills Bill [HL]",
-      "stage": "Motion to revive Bill",
-      "house": "Lords",
-      "updated": "30 Oct 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/3897"
-    },
-    {
-      "id": 4022,
-      "title": "Northern Ireland Troubles Bill",
-      "stage": "2nd reading",
-      "house": "Lords",
-      "updated": "30 Oct 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4022"
-    },
-    {
-      "id": 4125,
-      "title": "Civil Aviation (Consumer Protection and Regulatory Reform) Bill [HL]",
-      "stage": "Report stage",
-      "house": "Commons",
-      "updated": "29 Oct 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4125"
-    },
-    {
-      "id": 4296,
-      "title": "Church Appointments (Repeal of Discriminatory Provision) Bill",
-      "stage": "2nd reading",
-      "house": "Lords",
-      "updated": "29 Oct 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4296"
-    },
-    {
-      "id": 4128,
-      "title": "Commercial Payments Bill [HL]",
-      "stage": "2nd reading",
-      "house": "Commons",
-      "updated": "29 Oct 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4128"
-    },
-    {
-      "id": 4065,
-      "title": "Armed Forces Bill",
-      "stage": "Consideration of Lords amendments",
-      "house": "Commons",
-      "updated": "29 Oct 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4065"
-    },
-    {
-      "id": 4184,
-      "title": "Gambling Act 2005 (Mandatory Conditions of Lottery Operating Licences) Bill",
-      "stage": "2nd reading",
-      "house": "Commons",
-      "updated": "28 Oct 2026",
-      "act": false,
-      "defeated": false,
-      "url": "https://bills.parliament.uk/bills/4184"
+      "url": "https://bills.parliament.uk/bills/4038"
     }
   ],
-  "total": 4067,
+  "total": 1,
   "note": ""
 }

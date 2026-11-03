@@ -4,9 +4,9 @@
   "source": "Early Day Motions API",
   "sourceUrl": "https://edm.parliament.uk/member/5274",
   "status": "ok",
-  "retrieved": "2026-11-03T09:01:56.989146+00:00",
-  "retrievedDisplay": "3 November 2026, 09:01",
-  "lastAttempt": "2026-11-03T09:01:56.989146+00:00",
+  "retrieved": "2026-11-03T09:09:20.868214+00:00",
+  "retrievedDisplay": "3 November 2026, 09:09",
+  "lastAttempt": "2026-11-03T09:09:20.868214+00:00",
   "items": [
     {
       "id": 64756,
@@ -18,7 +18,40 @@
       "sponsor": "Sonia Kumar",
       "signatures": 8,
       "url": "https://edm.parliament.uk/early-day-motion/64756"
+    },
+    {
+      "id": 63605,
+      "uin": 1228,
+      "title": "National Operating Department Practitioner Day",
+      "date": "2025-05-08",
+      "dateDisplay": "8 May 2025",
+      "role": "Signed",
+      "sponsor": "Cat Eccles",
+      "signatures": 18,
+      "url": "https://edm.parliament.uk/early-day-motion/63605"
+    },
+    {
+      "id": 62724,
+      "uin": 383,
+      "title": "Work of St John Ambulance",
+      "date": "2024-11-11",
+      "dateDisplay": "11 Nov 2024",
+      "role": "Signed",
+      "sponsor": "Kirith Entwistle",
+      "signatures": 49,
+      "url": "https://edm.parliament.uk/early-day-motion/62724"
+    },
+    {
+      "id": 62480,
+      "uin": 159,
+      "title": "50th anniversary of the Federation of Small Businesses",
+      "date": "2024-09-10",
+      "dateDisplay": "10 Sep 2024",
+      "role": "Signed",
+      "sponsor": "Matt Western",
+      "signatures": 22,
+      "url": "https://edm.parliament.uk/early-day-motion/62480"
     }
   ],
-  "total": 1
+  "total": 4
 }

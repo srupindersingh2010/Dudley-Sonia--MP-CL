@@ -1,19 +1,124 @@
 {
-  "updated": "2026-11-03T09:08:36.836296+00:00",
-  "updatedDisplay": "3 November 2026, 09:08",
+  "updated": "2026-11-03T09:09:20.868214+00:00",
+  "updatedDisplay": "3 November 2026, 09:09",
   "sections": [
+    {
+      "key": "profile",
+      "label": "MP profile & roles",
+      "status": "ok",
+      "retrievedDisplay": "3 November 2026, 09:09",
+      "error": null
+    },
+    {
+      "key": "whatson",
+      "label": "In Parliament this week",
+      "status": "ok",
+      "retrievedDisplay": "3 November 2026, 09:09",
+      "error": null
+    },
+    {
+      "key": "votes",
+      "label": "Votes",
+      "status": "ok",
+      "retrievedDisplay": "3 November 2026, 09:09",
+      "error": null
+    },
+    {
+      "key": "speeches",
+      "label": "Speeches",
+      "status": "ok",
+      "retrievedDisplay": "3 November 2026, 09:09",
+      "error": null
+    },
+    {
+      "key": "questions",
+      "label": "Written questions",
+      "status": "ok",
+      "retrievedDisplay": "3 November 2026, 09:09",
+      "error": null
+    },
+    {
+      "key": "edms",
+      "label": "Early Day Motions",
+      "status": "ok",
+      "retrievedDisplay": "3 November 2026, 09:09",
+      "error": null
+    },
+    {
+      "key": "bills",
+      "label": "Bills",
+      "status": "ok",
+      "retrievedDisplay": "3 November 2026, 09:09",
+      "error": null
+    },
+    {
+      "key": "interests",
+      "label": "Register of Members' Financial Interests",
+      "status": "ok",
+      "retrievedDisplay": "3 November 2026, 09:09",
+      "error": null
+    },
+    {
+      "key": "petitions",
+      "label": "Petitions",
+      "status": "ok",
+      "retrievedDisplay": "3 November 2026, 09:09",
+      "error": null
+    },
+    {
+      "key": "council",
+      "label": "Dudley Council meetings",
+      "status": "ok",
+      "retrievedDisplay": "3 November 2026, 09:09",
+      "error": null
+    },
+    {
+      "key": "wmca",
+      "label": "WMCA meetings",
+      "status": "ok",
+      "retrievedDisplay": "3 November 2026, 09:09",
+      "error": null
+    },
+    {
+      "key": "police",
+      "label": "Policing & safety",
+      "status": "ok",
+      "retrievedDisplay": "3 November 2026, 09:09",
+      "error": null
+    },
+    {
+      "key": "police_news",
+      "label": "Police news",
+      "status": "ok",
+      "retrievedDisplay": "3 November 2026, 09:09",
+      "error": null
+    },
+    {
+      "key": "stats",
+      "label": "Constituency profile",
+      "status": "ok",
+      "retrievedDisplay": "3 November 2026, 09:09",
+      "error": null
+    },
+    {
+      "key": "news",
+      "label": "Local news",
+      "status": "ok",
+      "retrievedDisplay": "3 November 2026, 09:09",
+      "error": null
+    },
     {
       "key": "diary",
       "label": "Meetings & events diary",
       "status": "not-configured",
-      "retrievedDisplay": "3 November 2026, 09:08",
+      "retrievedDisplay": "3 November 2026, 09:09",
       "error": null
     },
     {
       "key": "gallery",
       "label": "Photo gallery",
       "status": "not-configured",
-      "retrievedDisplay": "3 November 2026, 09:08",
+      "retrievedDisplay": "3 November 2026, 09:09",
       "error": null
     }
   ]

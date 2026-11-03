@@ -4,9 +4,9 @@
   "source": "RSS feeds (see list)",
   "sourceUrl": "https://news.google.com/",
   "status": "ok",
-  "retrieved": "2026-11-03T09:01:56.989146+00:00",
-  "retrievedDisplay": "3 November 2026, 09:01",
-  "lastAttempt": "2026-11-03T09:01:56.989146+00:00",
+  "retrieved": "2026-11-03T09:09:20.868214+00:00",
+  "retrievedDisplay": "3 November 2026, 09:09",
+  "lastAttempt": "2026-11-03T09:09:20.868214+00:00",
   "items": [
     {
       "title": "Dudley town centre could benefit from £3m fund to transform derelict buildings",
@@ -25,6 +25,42 @@
       "published": "2026-10-30T19:00:00+00:00",
       "publishedDisplay": "30 Oct 2026",
       "feed": "Google News – Sonia Kumar"
+    },
+    {
+      "title": "Netherton pupils meet Speaker of the House of Commons",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZ19icnBXV0pCZU10MnZhU2lZOTVxQmoxOXQ0Y0Eyd21odDkzNW1XX0FUSG53b2ZhT3Z4WFpwaHhLaW9TX1NBSkRMU0htMVBIV3ZfelpHUTgwUzNiV3gtUXk1NWVLdk83d1ZUWVdBeUpYOU12OHFUMzZpZGZPaklXMnY0NlRfVUNxd2hxRndEb2JvbGpRQXVvUWVBRndvRWZnRmE1X0d3?oc=5",
+      "summary": "Netherton pupils meet Speaker of the House of Commons Express and Star",
+      "publisher": "Express and Star",
+      "published": "2026-10-27T15:21:00+00:00",
+      "publishedDisplay": "27 Oct 2026",
+      "feed": "Google News – Dudley MP"
+    },
+    {
+      "title": "Dudley nurse gets parking fine while treating sick baby",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5KRjBVOE01TG1jMENYN2t0S1ZKaml5cHo1WEVrOTItR28yNXVaZjRxUmlScXd1Uzh1eUN2eVlDSS1jTTliMTJkZ0RObnlaOFNwSU43S0FrLXdBQlphTFE?oc=5",
+      "summary": "Dudley nurse gets parking fine while treating sick baby BBC",
+      "publisher": "BBC",
+      "published": "2026-10-23T07:00:00+00:00",
+      "publishedDisplay": "23 Oct 2026",
+      "feed": "Google News – Dudley MP"
+    },
+    {
+      "title": "Nurse faces £266 court penalty after parking to treat acutely ill baby",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxObU9Md253VF82MEpZQ0U1eVJLZkt6N3dtZ1pfb1ppaUVISlR5WEtkdXE1bEhlak5SSlpRa0VOclZKaG1ucnZGd0lEX1VGUDEtN1lfZmc1NXh5VnFQb1VmbjYtRFpXSVBlR0J5TlBSdkc5a3YwTG1pcWhUQ3FmN3RuZ3pjUFByRnFMNGp2aVNZWXROV3BkMDlWM1pIbUgxaUxtdHF1czNEYzZvY0ltWDg0?oc=5",
+      "summary": "Nurse faces £266 court penalty after parking to treat acutely ill baby Dudleynews.co.uk",
+      "publisher": "Dudleynews.co.uk",
+      "published": "2026-10-22T07:00:00+00:00",
+      "publishedDisplay": "22 Oct 2026",
+      "feed": "Google News – Dudley MP"
+    },
+    {
+      "title": "Dudley emergency nurse who climbed 10 flights of stairs to help acutely ill baby is hit with £267 parking bill",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQWHBOZEVRVE1KMURiWk03eDFEM2pHenRTVXFoOXJOWWZEbUhJamc2azktVkMxcWN1U0REZnBtZ2lPTUlPMm5mQy1waG5MNzhLTWh4N2ZfTjM5dEZ2NGJtNHVEal9OMXUwQWswTUtkeThlMmxTbGV1d3pMMWdwOVkzNkR5dG5TTHFWdmd6eXBLczJXNG01UWdUWVF3cGZfeFlzQVBwcVdFVUhPWHJ1c2Ftci03QUdvTjF3ZDZzUVI2VE1BUHZ4ekdDSU9CSWZRdTkwSklxWFdZVlYxdHE2OGt4dFZ3?oc=5",
+      "summary": "Dudley emergency nurse who climbed 10 flights of stairs to help acutely ill baby is hit with £267 parking bill Express and Star",
+      "publisher": "Express and Star",
+      "published": "2026-10-22T07:00:00+00:00",
+      "publishedDisplay": "22 Oct 2026",
+      "feed": "Google News – Dudley MP"
     },
     {
       "title": "Andy Burnham government parking crackdown 'needed' says Dudley MP as nurse faces charges",
@@ -52,6 +88,15 @@
       "published": "2026-10-13T07:00:00+00:00",
       "publishedDisplay": "13 Oct 2026",
       "feed": "Google News – Sonia Kumar"
+    },
+    {
+      "title": "Call for answers on medical school deal collapse",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQSjhkR0gzLUZZQjhUZks4SmxXN2t1WVBlalQxSUpsVjR3Ty1yS05zbjhfZ1hmNDFQcnZsS2lkUzFCc2NyaTJwWlZ2bUpBQ2VoeWdlY1huOXFOX1RFM0FTRVAwbWVKZ0VCMkFyM0FWXzQ1WFhhLWVYZXFrbEVWUVhKYXZzUVdYcm45aGs1eWRTWi1RaDNzUmt1VEVSVQ?oc=5",
+      "summary": "Call for answers on medical school deal collapse Stourbridge News",
+      "publisher": "Stourbridge News",
+      "published": "2026-10-13T07:00:00+00:00",
+      "publishedDisplay": "13 Oct 2026",
+      "feed": "Google News – Dudley MP"
     },
     {
       "title": "MPs Sonia Kumar and Alex Ballinger see how Dudley Reservists train for drone warfare",
@@ -90,81 +135,22 @@
       "feed": "Google News – Sonia Kumar"
     },
     {
-      "title": "MP criticises 'unfair' use of £310,000 Dudley town centre grant to fund £50,000 regeneration post",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOTjdlZDBqUU9QWmY1bXc2dUVaMnNjZC1KOUh6N0hzanhubHVjUVZaMDNvN0l4VzhJTmhxck81YUVBX0dhdmZvMUpTaF9PMGpKX1U5RkpqakpVLVctaDBzeExOMTVoVUx1eTNBUEpCR09hQmtWamVHREswSmxfTFhGY1drWFJGaHdFSU51VWVwVnhsV3BvS3BTUm52MDlQY2dJMFBCUTJTUVVmSnZFTlI0cGdiNDNUTjU5cDREVm94OVhrTGVYcW93WUo4TFJDMEIxZ3dWV0p3?oc=5",
-      "summary": "MP criticises 'unfair' use of £310,000 Dudley town centre grant to fund £50,000 regeneration post Express and Star",
+      "title": "Row over £50,000 Dudley regeneration job turned into political spat",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQczVhMWtUeWFSeU0tcVR4VkJVUzJSaHZiMUFjekxKakpfMm5vSlprcW0ycl9Ed1l0UmVHLVpLWmF6MUhla0h1Nm94U2FXZHJqNWhQWlNUcWk3WElZT3dnOHRoVHRnNkxKbTkxZkVIV0FsYnhwTEhHTlFsVWJ2eXpUQ25SSi1FdHNMOFRFNm9GdzZuam5Xc2pndUNjcXc0TkZ2TjhYRGhfemlRTWVXMkxobQ?oc=5",
+      "summary": "Row over £50,000 Dudley regeneration job turned into political spat Express and Star",
       "publisher": "Express and Star",
-      "published": "2026-10-04T07:00:00+00:00",
-      "publishedDisplay": "4 Oct 2026",
-      "feed": "Google News – Sonia Kumar"
-    },
-    {
-      "title": "Dudley charity helping families in hardship issues appeal for support",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOMTV4QnFXY0QtYVlGSlhDU1JZckhDb0ZIYzk4MnJfSk13N2I0M2JweHRQMEN2SVhzS0E1aEtXUU9mZkF1aUhCRVJud1VoZnU1X3I4RW9vZ05VUmo0RXpHelZLdFd1a1dHZ0YyUG44bDBvR3FuSGJoSVVoZDhXWXk3M1M1dEx5Y1ExSXluNDhRa1AwTUExbWs4UWd3?oc=5",
-      "summary": "Dudley charity helping families in hardship issues appeal for support Dudleynews.co.uk",
-      "publisher": "Dudleynews.co.uk",
-      "published": "2026-09-23T07:00:00+00:00",
-      "publishedDisplay": "23 Sep 2026",
-      "feed": "Google News – Sonia Kumar"
-    },
-    {
-      "title": "‘Disgusting’ treatment for SEND child slammed by MP",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNenAtRUZEVkg4RmlUaTRvSVhBUk4zQVN3QlE2R2tjMXc3YjhjWTR0bWJvUXdvUVJ2d1pyMG9DLXlST1EybnRmb3NtUDVzVmFTeUl0RlRqUXNNT3g5V0lZMWZabW4takp0MDFCY245NXdFR0pLSUtnY2VIcldaX25BVW5QNHVJaG42eGNpS0lCdzlYb191RmF6U3JlYVo?oc=5",
-      "summary": "‘Disgusting’ treatment for SEND child slammed by MP Stourbridge News",
-      "publisher": "Stourbridge News",
-      "published": "2026-09-22T07:00:00+00:00",
-      "publishedDisplay": "22 Sep 2026",
-      "feed": "Google News – Sonia Kumar"
-    },
-    {
-      "title": "MP calls for 'Body, Bedroom, Brain' health checks in Dudley to be made permanent",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOOEVDRjJ0czlmaE53REdzWDNMTXFmeUZLLUtpMzAzM3ppbzFuN2Y0cjdnakF3MkxRcUo3MHNtc2R1R2p4MGFxRjZYdjdCZnZuSUF5OHlBUWNROHM3RDRyVzR5UmYta21EOHNtb002Wmo0OWt0eVlfSWFLZ1VQb0xsVllVZ2RhMDBZd0NIYWgxdHlPZmVOY2x3N24tRi11UzJwMTVGVFViaGY1OG9YV25YQlJkYi1ybnNyWFRGaA?oc=5",
-      "summary": "MP calls for 'Body, Bedroom, Brain' health checks in Dudley to be made permanent Express and Star",
-      "publisher": "Express and Star",
-      "published": "2026-09-21T07:00:00+00:00",
-      "publishedDisplay": "21 Sep 2026",
-      "feed": "Google News – Sonia Kumar"
-    },
-    {
-      "title": "Sonia Kumar MP - Backing the people who keep Dudley going",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPTUZYTXAxMUM0S3hBT3pQRjhpWHZoVU53enY5NVBMN0c1Y1l5U0JpQ2k1dVBCT1pBeE91dFVHQzZlUk5QNVRCYVJXVFNmTE5PVnh2TUtiZnNNT3l3R04zUEpMRHpYUTl4MVdHZzFrXzFWTVlfbVVkczl3SUJvdjFYRUZyVDZsYzBucFNDWjYzMFoyQVd4T0Z2Vg?oc=5",
-      "summary": "Sonia Kumar MP - Backing the people who keep Dudley going Dudleynews.co.uk",
-      "publisher": "Dudleynews.co.uk",
-      "published": "2026-09-17T07:00:00+00:00",
-      "publishedDisplay": "17 Sep 2026",
-      "feed": "Google News – Sonia Kumar"
-    },
-    {
-      "title": "The Wicklow Witch opens new immersive shop in Dudley",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQZEJtQ0FCalNOelAtY3MzR0plQnVIbDBPMWN3RFhtSVlGUWd0SGxJaEd4N1ZjQkhNVGJvdU52cHVwdnFQSzB5ZWU4eG51RXFFNUExa3lkUFREWDdiVTRFaUJWRXA4R2syLV9BOEtzZjNuUnBkYWxlTVNiZmV4MmtSQTBiQ19fRUNxQTdNWjhqSmRpX1Vpemc?oc=5",
-      "summary": "The Wicklow Witch opens new immersive shop in Dudley Dudleynews.co.uk",
-      "publisher": "Dudleynews.co.uk",
-      "published": "2026-09-08T07:00:00+00:00",
-      "publishedDisplay": "8 Sep 2026",
-      "feed": "Google News – Sonia Kumar"
+      "published": "2026-10-06T07:00:00+00:00",
+      "publishedDisplay": "6 Oct 2026",
+      "feed": "Google News – Dudley MP"
     }
   ],
-  "feedErrors": [
-    "Sonia Kumar MP website: https://sonia-kumar.co.uk/feed/ failed: HTTP 403",
-    "Express & Star: https://www.expressandstar.com/arc/outboundfeeds/rss/category/news/local-hubs/du failed: HTTP 404",
-    "Black Country Radio: https://www.blackcountryradio.co.uk/news/local-headlines/feed/ failed: HTTP 404",
-    "Dudley Council news: https://councilnews.dudley.gov.uk/news/rss failed: HTTP 404"
-  ],
+  "feedErrors": [],
   "feeds": [
-    {
-      "name": "Sonia Kumar MP website"
-    },
     {
       "name": "Google News – Sonia Kumar"
     },
     {
-      "name": "Express & Star"
-    },
-    {
-      "name": "Black Country Radio"
-    },
-    {
-      "name": "Dudley Council news"
+      "name": "Google News – Dudley MP"
     }
   ]
 }
