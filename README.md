@@ -83,15 +83,17 @@ Events from the next 30 days appear in the diary. Past events are kept in an arc
 | 9 | Bills | Bills API | Usually empty for a backbencher |
 | 10 | Register of interests | Interests API | |
 | 11 | Petitions | petition.parliament.uk JSON | Ranked by signatures from constituency **E14001204** (Dudley, 2024 boundaries) |
-| 12 | Council / WMCA meetings | ModernGov calendars | The script looks for Dudley's committee system automatically (see below) |
+| 12 | Council / WMCA meetings | Dudley: CMIS (dudley.cmis.uk.com); WMCA: ModernGov | |
 | 13 | Policing | data.police.uk + Google News RSS | Neighbourhoods are found from 8 sample points across the constituency |
 | 14 | Constituency profile | ONS via Nomis (Claimant Count, Census 2021) | Links to the Commons Library dashboards |
-| 15 | Local news | RSS: MP's website, Google News, Express & Star, Black Country Radio, Dudley Council | Local feeds are filtered for mentions of Sonia |
+| 15 | Local news | Google News RSS searches for "Sonia Kumar" and "Dudley MP" | The MP's own site, Express & Star, Black Country Radio and Dudley Council feeds were unavailable to the server |
 | 16–17 | Events & useful links | Fixed lists in `config/content.json` | Edit freely |
 
 **If a feed fails,** that section keeps its last good data and shows the date it was retrieved. If it has never worked, the section shows a friendly "fills at the next update" note with a link to the source. A failure never stops the rest of the update. The footer lists the status of every source.
 
-**Dudley Council:** I couldn't confirm which committee-papers system Dudley Council uses. The script reads the council's *Council meetings* page, looks for a ModernGov link, and then tries several likely addresses. If none of them works, the section shows a link to the council's meetings page instead. Check the Actions log after the first run. If the council uses a different system (such as CMIS), that section will need a small custom scraper.
+**Dudley Council** uses CMIS (https://dudley.cmis.uk.com), not ModernGov. The script reads the meetings embedded in its calendar page (clicking on to next month with a headless browser). If Dudley ever moves to ModernGov, delete `council.cmisBase` from `config/site.json` and the ModernGov code takes over.
+
+**Maintenance tool:** *Actions → Probe URLs* fetches any URLs from GitHub's servers and prints what came back – useful when a source changes.
 
 ---
 

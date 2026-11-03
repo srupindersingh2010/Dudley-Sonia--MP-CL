@@ -191,7 +191,7 @@ def fetch_questions():
 # ------------------------------------------------------------------ 8. EDMs
 def fetch_edms():
     raw = get_json("https://oralquestionsandmotions-api.parliament.uk/EarlyDayMotions/list", params={
-        "parameters.memberId": MID, "parameters.take": 25,
+        "parameters.memberId": MID, "parameters.includeSponsoredByMember": "true", "parameters.take": 25,
         "parameters.orderBy": "DateTabledDesc"})
     items = []
     for e in raw.get("Response") or []:
@@ -211,7 +211,7 @@ def fetch_edms():
 # ----------------------------------------------------------------- 9. Bills
 def fetch_bills():
     raw = get_json("https://bills-api.parliament.uk/api/v1/Bills", params={
-        "SponsorMemberId": MID, "SortOrder": "DateUpdatedDescending", "Take": 20})
+        "MemberId": MID, "SortOrder": "DateUpdatedDescending", "Take": 20})
     items = []
     for b in raw.get("items") or []:
         stage = b.get("currentStage") or {}

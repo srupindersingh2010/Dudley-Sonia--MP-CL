@@ -414,7 +414,7 @@ def nomis_geos(ds):
               and "westminster" in c["description"]["value"].lower()), None)
     if t is None:
         raise RuntimeError(f"{ds}: no 2024 constituency geography")
-    local = next((c["value"] for c in _codes(get_json(f"{NOMIS}/{ds}/geography/TYPE{t}.def.sdmx.json"))
+    local = next((c["value"] for c in _codes(get_json(f"{NOMIS}/{ds}/geography/{t if str(t).startswith('TYPE') else 'TYPE' + str(t)}.def.sdmx.json"))
                   if _ann(c, "GeogCode") == ons), None)
     if local is None:
         raise RuntimeError(f"{ds}: {ons} not found in TYPE{t}")

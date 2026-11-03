@@ -145,7 +145,7 @@
       <ul class="roles">
         {% for r in p.roles %}<li><span class="tag">{{ r.type }}</span> {{ r.name }}{% if r.since %} <span class="muted">· since {{ r.since }}</span>{% endif %}</li>{% endfor %}
       </ul>
-      {% else %}{{ empty("Committee and other roles appear here after the first daily update.") }}{% endif %}
+      {% elif d.profile.status in ("ok", "stale") %}<p>Sonia does not currently hold a ministerial, committee or other formal parliamentary post.</p>{% else %}{{ empty("Committee and other roles appear here after the first daily update.") }}{% endif %}
       {% if p.pastCommittees %}
       <details class="more"><summary>Previous committee roles ({{ p.pastCommittees|length }})</summary>
         <ul class="roles">{% for r in p.pastCommittees %}<li>{{ r.name }} <span class="muted">· {{ r.from }} – {{ r.to }}</span></li>{% endfor %}</ul>

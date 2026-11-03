@@ -131,29 +131,14 @@
   "news": {
     "feeds": [
       {
-        "name": "Sonia Kumar MP website",
-        "url": "https://sonia-kumar.co.uk/feed/",
-        "filter": false
-      },
-      {
         "name": "Google News – Sonia Kumar",
         "url": "https://news.google.com/rss/search?q=%22Sonia%20Kumar%22%20(MP%20OR%20Dudley)%20when:60d&hl=en-GB&gl=GB&ceid=GB:en",
         "filter": false
       },
       {
-        "name": "Express & Star",
-        "url": "https://www.expressandstar.com/arc/outboundfeeds/rss/category/news/local-hubs/dudley/?outputType=xml",
-        "filter": true
-      },
-      {
-        "name": "Black Country Radio",
-        "url": "https://www.blackcountryradio.co.uk/news/local-headlines/feed/",
-        "filter": true
-      },
-      {
-        "name": "Dudley Council news",
-        "url": "https://councilnews.dudley.gov.uk/news/rss",
-        "filter": true
+        "name": "Google News – Dudley MP",
+        "url": "https://news.google.com/rss/search?q=%22Dudley%20MP%22%20when:60d&hl=en-GB&gl=GB&ceid=GB:en",
+        "filter": false
       }
     ],
     "filterTerms": [

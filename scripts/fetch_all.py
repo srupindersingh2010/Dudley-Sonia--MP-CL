@@ -30,7 +30,7 @@ S = [
      f"https://questions-statements.parliament.uk/written-questions?AskingMemberId={MID}", P.fetch_questions),
     ("edms", "Early Day Motions", "Early Day Motions API",
      f"https://edm.parliament.uk/member/{MID}", P.fetch_edms),
-    ("bills", "Bills", "Bills API", f"https://bills.parliament.uk/?SponsorMemberId={MID}", P.fetch_bills),
+    ("bills", "Bills", "Bills API", f"https://bills.parliament.uk/?SearchTerm=&Member={MID}", P.fetch_bills),
     ("interests", "Register of Members' Financial Interests", "Register of Interests API",
      f"https://members.parliament.uk/member/{MID}/registeredinterests", P.fetch_interests),
     ("petitions", "Petitions", "UK Parliament Petitions", "https://petition.parliament.uk/petitions",
