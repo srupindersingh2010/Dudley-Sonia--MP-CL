@@ -62,14 +62,15 @@
   },
   "council": {
     "name": "Dudley Metropolitan Borough Council",
-    "meetingsPage": "https://www.dudley.gov.uk/council-community/council-meetings/",
+    "meetingsPage": "https://www.dudley.gov.uk/council-community/council-meetings-and-decisions/",
     "moderngovCandidates": [
       "https://dudley.moderngov.co.uk",
       "https://democracy.dudley.gov.uk",
       "https://committees.dudley.gov.uk",
       "https://moderngov.dudley.gov.uk"
     ],
-    "defaultLocation": "Council House, Priory Road, Dudley"
+    "defaultLocation": "Council House, Priory Road, Dudley",
+    "cmisBase": "https://dudley.cmis.uk.com"
   },
   "combinedAuthority": {
     "name": "West Midlands Combined Authority (WMCA)",

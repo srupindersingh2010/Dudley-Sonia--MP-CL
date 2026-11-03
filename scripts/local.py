@@ -121,8 +121,60 @@ def _moderngov(candidates, days=30):
     raise RuntimeError("no ModernGov calendar reachable at: " + ", ".join(candidates))
 
 
+CMIS_APPT = re.compile(r'\\?"id\\?":(\d+),\\?"visible\\?":true,\\?"subject\\?":\\?"([^"\\]*)\\?".*?\\?"start\\?":\\?"(\d{4}/\d{2}/\d{2}) (\d{2}:\d{2})', re.S)
+
+
+def _cmis_parse(html, base):
+    out = {}
+    for mid, subject, d, t in CMIS_APPT.findall(html):
+        subject = subject.replace("\\u0026", "&").replace("&amp;", "&")
+        title = re.sub(r"^\d{1,2}:\d{2}\s*", "", subject)
+        title, _, room = title.partition(" : ")
+        day = date.fromisoformat(d.replace("/", "-"))
+        out[mid] = {"date": day.isoformat(), "dateDisplay": day.strftime("%a %-d %b"),
+                    "time": datetime.strptime(t, "%H:%M").strftime("%-I.%M%p").lower(),
+                    "title": title.strip(), "location": room.strip(),
+                    "url": f"{base}/Meetings.aspx", "key": mid}
+    return out
+
+
+def _cmis(base, days=30):
+    """Dudley uses CMIS (Telerik scheduler). The month's meetings are embedded
+    as JSON in the page; the next month needs a click, so use a real browser
+    when available and fall back to plain HTTP (current month only)."""
+    found = {}
+    try:
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as p:
+            b = p.chromium.launch(headless=True, args=["--no-sandbox"])
+            pg = b.new_context(user_agent=BROWSER_UA, locale="en-GB").new_page()
+            pg.goto(f"{base}/Meetings.aspx", wait_until="networkidle", timeout=60000)
+            found.update(_cmis_parse(pg.content(), base))
+            nxt = pg.locator(".rsNextDay, .rsArrowRight, a[title*='Next']").first
+            if nxt.count():
+                nxt.click()
+                pg.wait_for_timeout(4000)
+                found.update(_cmis_parse(pg.content(), base))
+            b.close()
+        print(f"    CMIS via browser: {len(found)} meetings")
+    except Exception as e:
+        print("    CMIS browser:", e)
+    if not found:
+        found = _cmis_parse(get(f"{base}/Meetings.aspx", accept="text/html", browser_ua=True).text, base)
+        print(f"    CMIS via HTTP: {len(found)} meetings")
+    if not found:
+        raise RuntimeError("CMIS calendar returned no meetings")
+    cutoff = (TODAY + timedelta(days=days)).isoformat()
+    return sorted([m for m in found.values() if TODAY.isoformat() <= m["date"] <= cutoff],
+                  key=lambda m: (m["date"], m["time"]))
+
+
 def fetch_council_meetings():
     c = CONFIG["council"]
+    if c.get("cmisBase"):
+        items = _cmis(c["cmisBase"].rstrip("/"))
+        return {"items": items, "system": "CMIS", "calendarUrl": c["cmisBase"].rstrip("/") + "/Meetings.aspx",
+                "note": "" if items else "No meetings are listed for the next 30 days."}
     cands = _discover_moderngov(c["meetingsPage"]) + c["moderngovCandidates"]
     base, items = _moderngov(list(dict.fromkeys(cands)))
     return {"items": items, "system": base, "calendarUrl": base + "/mgCalendarMonthView.aspx",
@@ -332,13 +384,55 @@ def fetch_news():
 NOMIS = "https://www.nomisweb.co.uk/api/v01/dataset"
 
 
+def _codes(js):
+    cl = js["structure"]["codelists"]
+    if not cl:
+        return []
+    cl = cl["codelist"]
+    cl = cl[0] if isinstance(cl, list) else cl
+    codes = cl.get("code") or []
+    return codes if isinstance(codes, list) else [codes]
+
+
+def _ann(code, title):
+    for a in (code.get("annotations") or {}).get("annotation") or []:
+        if a.get("annotationtitle") == title:
+            return str(a.get("annotationtext"))
+    return ""
+
+
+_GEO = {}
+
+
+def nomis_geos(ds):
+    """Nomis needs its own numeric geography IDs: find the Dudley 2024 constituency and England."""
+    if ds in _GEO:
+        return _GEO[ds]
+    ons = CONFIG["mp"]["onsCode"]
+    types = _codes(get_json(f"{NOMIS}/{ds}/geography/TYPE.def.sdmx.json"))
+    t = next((c["value"] for c in types if "july 2024" in c["description"]["value"].lower()
+              and "westminster" in c["description"]["value"].lower()), None)
+    if t is None:
+        raise RuntimeError(f"{ds}: no 2024 constituency geography")
+    local = next((c["value"] for c in _codes(get_json(f"{NOMIS}/{ds}/geography/TYPE{t}.def.sdmx.json"))
+                  if _ann(c, "GeogCode") == ons), None)
+    if local is None:
+        raise RuntimeError(f"{ds}: {ons} not found in TYPE{t}")
+    eng = next((c["value"] for c in _codes(get_json(f"{NOMIS}/{ds}/geography.def.sdmx.json"))
+                if _ann(c, "GeogCode") == "E92000001"), 2092957699)
+    _GEO[ds] = (str(local), str(eng))
+    print(f"    Nomis {ds}: Dudley={local} England={eng}")
+    return _GEO[ds]
+
+
 def _nomis_census(code, geos):
     """Return {category: {geo: percent}} for a Census 2021 TS table."""
     defs = get_json(f"{NOMIS}/def.sdmx.json", params={"search": f"*{code}*"})
     kfs = defs["structure"]["keyfamilies"]["keyfamily"]
     kfs = kfs if isinstance(kfs, list) else [kfs]
     ds = next(k["id"] for k in kfs if code.lower() in json.dumps(k.get("name", "")).lower())
-    r = get(f"{NOMIS}/{ds}.data.csv", params={"geography": ",".join(geos), "measures": "20301"},
+    loc, eng = nomis_geos(ds)
+    r = get(f"{NOMIS}/{ds}.data.csv", params={"geography": f"{loc},{eng}", "measures": "20301"},
             accept="text/csv")
     rows = list(csv.DictReader(io.StringIO(r.text)))
     if not rows:
@@ -350,7 +444,8 @@ def _nomis_census(code, geos):
     out = {}
     for row in rows:
         try:
-            out.setdefault(row[dim], {})[row["GEOGRAPHY_CODE"]] = round(float(row["OBS_VALUE"]), 1)
+            g = geos[0] if (row.get("GEOGRAPHY") == loc or row.get("GEOGRAPHY_CODE") == geos[0]) else geos[1]
+            out.setdefault(row[dim], {})[g] = round(float(row["OBS_VALUE"]), 1)
         except Exception:
             pass
     return ds, out
@@ -362,11 +457,12 @@ def fetch_profile_stats():
     stats, notes = [], []
     # Claimant count (monthly)
     try:
+        loc, eng = nomis_geos("NM_162_1")
         r = get(f"{NOMIS}/NM_162_1.data.csv", params={
-            "geography": ",".join(geos), "date": "latest", "gender": "0", "age": "0",
+            "geography": f"{loc},{eng}", "date": "latest", "gender": "0", "age": "0",
             "measure": "1,2", "measures": "20100"}, accept="text/csv")
         rows = list(csv.DictReader(io.StringIO(r.text)))
-        val = {(x["GEOGRAPHY_CODE"], x["MEASURE_NAME"]): x["OBS_VALUE"] for x in rows}
+        val = {(ons if (x.get("GEOGRAPHY") == loc or x.get("GEOGRAPHY_CODE") == ons) else "E92000001", x["MEASURE_NAME"]): x["OBS_VALUE"] for x in rows}
         cnt = next((v for (g, m), v in val.items() if g == ons and "count" in m.lower()), None)
         rate = next((v for (g, m), v in val.items() if g == ons and "residents" in m.lower()), None)
         eng = next((v for (g, m), v in val.items() if g == "E92000001" and "residents" in m.lower()), None)
@@ -388,7 +484,7 @@ def fetch_profile_stats():
         try:
             ds, data = _nomis_census(code, geos)
             if code == "TS001":
-                r = get(f"{NOMIS}/{ds}.data.csv", params={"geography": ons, "measures": "20100"}, accept="text/csv")
+                r = get(f"{NOMIS}/{ds}.data.csv", params={"geography": nomis_geos(ds)[0], "measures": "20100"}, accept="text/csv")
                 rows = list(csv.DictReader(io.StringIO(r.text)))
                 tot = max(float(x["OBS_VALUE"]) for x in rows)
                 stats.append({"group": group, "label": "Population (Census 2021)", "value": f"{int(tot):,}",

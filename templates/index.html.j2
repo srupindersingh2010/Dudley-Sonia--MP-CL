@@ -384,7 +384,7 @@
       <h3>{{ title }}</h3>
       {% if m["items"] %}
       <ul class="meet">{% for x in m["items"][:14] %}
-        <li><span class="meet-d">{{ x.dateDisplay }}{% if x.time %}<br><small>{{ x.time }}</small>{% endif %}</span><a href="{{ x.url }}">{{ x.title }}</a></li>
+        <li><span class="meet-d">{{ x.dateDisplay }}{% if x.time %}<br><small>{{ x.time }}</small>{% endif %}</span><span><a href="{{ x.url }}">{{ x.title }}</a>{% if x.location %}<br><small class="muted">{{ x.location }}</small>{% endif %}</span></li>
       {% endfor %}</ul>
       {% if m["items"]|length > 14 %}<p class="small"><a href="{{ m.calendarUrl }}">See all {{ m["items"]|length }} meetings</a></p>{% endif %}
       {% else %}{{ empty(m.note or "Upcoming meetings appear here after the daily update.") }}{% endif %}
