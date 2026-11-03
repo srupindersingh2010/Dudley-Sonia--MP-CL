@@ -1,124 +1,19 @@
 {
-  "updated": "2026-11-03T09:01:56.989146+00:00",
-  "updatedDisplay": "3 November 2026, 09:01",
+  "updated": "2026-11-03T09:08:36.836296+00:00",
+  "updatedDisplay": "3 November 2026, 09:08",
   "sections": [
-    {
-      "key": "profile",
-      "label": "MP profile & roles",
-      "status": "ok",
-      "retrievedDisplay": "3 November 2026, 09:01",
-      "error": null
-    },
-    {
-      "key": "whatson",
-      "label": "In Parliament this week",
-      "status": "ok",
-      "retrievedDisplay": "3 November 2026, 09:01",
-      "error": null
-    },
-    {
-      "key": "votes",
-      "label": "Votes",
-      "status": "ok",
-      "retrievedDisplay": "3 November 2026, 09:01",
-      "error": null
-    },
-    {
-      "key": "speeches",
-      "label": "Speeches",
-      "status": "ok",
-      "retrievedDisplay": "3 November 2026, 09:01",
-      "error": null
-    },
-    {
-      "key": "questions",
-      "label": "Written questions",
-      "status": "ok",
-      "retrievedDisplay": "3 November 2026, 09:01",
-      "error": null
-    },
-    {
-      "key": "edms",
-      "label": "Early Day Motions",
-      "status": "ok",
-      "retrievedDisplay": "3 November 2026, 09:01",
-      "error": null
-    },
-    {
-      "key": "bills",
-      "label": "Bills",
-      "status": "ok",
-      "retrievedDisplay": "3 November 2026, 09:01",
-      "error": null
-    },
-    {
-      "key": "interests",
-      "label": "Register of Members' Financial Interests",
-      "status": "ok",
-      "retrievedDisplay": "3 November 2026, 09:01",
-      "error": null
-    },
-    {
-      "key": "petitions",
-      "label": "Petitions",
-      "status": "ok",
-      "retrievedDisplay": "3 November 2026, 09:01",
-      "error": null
-    },
-    {
-      "key": "council",
-      "label": "Dudley Council meetings",
-      "status": "ok",
-      "retrievedDisplay": "3 November 2026, 09:01",
-      "error": null
-    },
-    {
-      "key": "wmca",
-      "label": "WMCA meetings",
-      "status": "ok",
-      "retrievedDisplay": "3 November 2026, 09:01",
-      "error": null
-    },
-    {
-      "key": "police",
-      "label": "Policing & safety",
-      "status": "ok",
-      "retrievedDisplay": "3 November 2026, 09:01",
-      "error": null
-    },
-    {
-      "key": "police_news",
-      "label": "Police news",
-      "status": "ok",
-      "retrievedDisplay": "3 November 2026, 09:01",
-      "error": null
-    },
-    {
-      "key": "stats",
-      "label": "Constituency profile",
-      "status": "pending",
-      "retrievedDisplay": null,
-      "error": "RuntimeError: Claimant count: NM_162_1: E14001204 not found in TYPETYPE172; TS001: NM_2021_1: E14001204 not found in TYPETYPE172; TS037: NM_2055_1: no 2024 constituency geography; TS054: NM_2072_1: no 2024 constituency geography; TS066: NM_2083_1: E14001204 not found in TYPETYPE172"
-    },
-    {
-      "key": "news",
-      "label": "Local news",
-      "status": "ok",
-      "retrievedDisplay": "3 November 2026, 09:01",
-      "error": null
-    },
     {
       "key": "diary",
       "label": "Meetings & events diary",
       "status": "not-configured",
-      "retrievedDisplay": "3 November 2026, 09:01",
+      "retrievedDisplay": "3 November 2026, 09:08",
       "error": null
     },
     {
       "key": "gallery",
       "label": "Photo gallery",
       "status": "not-configured",
-      "retrievedDisplay": "3 November 2026, 09:01",
+      "retrievedDisplay": "3 November 2026, 09:08",
       "error": null
     }
   ]
