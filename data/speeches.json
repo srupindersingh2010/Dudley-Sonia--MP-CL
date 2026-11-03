@@ -1,0 +1,12 @@
+{
+  "key": "speeches",
+  "label": "Speeches",
+  "source": "Hansard API",
+  "sourceUrl": "https://hansard.parliament.uk/search/MemberContributions?memberId=5274",
+  "status": "pending",
+  "retrieved": null,
+  "retrievedDisplay": null,
+  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
+  "lastError": "RuntimeError: https://hansard-api.parliament.uk/search/contributions/Spoken.json failed: ProxyError: HTTPSConnectionPool(host='hansard-api.parliament.uk', port=443): Max retries exceeded with url: /search/contributions/Spoken.json?queryParameters.memberId=5274&queryParameters.take=20&queryParameters",
+  "items": []
+}

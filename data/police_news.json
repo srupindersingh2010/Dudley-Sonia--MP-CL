@@ -1,0 +1,12 @@
+{
+  "key": "police_news",
+  "label": "Police news",
+  "source": "Google News search",
+  "sourceUrl": "https://news.google.com/",
+  "status": "pending",
+  "retrieved": null,
+  "retrievedDisplay": null,
+  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
+  "lastError": "RuntimeError: https://news.google.com/rss/search?q=%22West%20Midlands%20Police%22%20%28Dudley% failed: ProxyError: HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=%22West%20Midlands%20Police%22%20%28Dudley%20OR%20Sedgley%20OR%20Gornal%20OR%20Pensne",
+  "items": []
+}

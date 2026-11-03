@@ -1,0 +1,12 @@
+{
+  "key": "petitions",
+  "label": "Petitions",
+  "source": "UK Parliament Petitions",
+  "sourceUrl": "https://petition.parliament.uk/petitions",
+  "status": "pending",
+  "retrieved": null,
+  "retrievedDisplay": null,
+  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
+  "lastError": "RuntimeError: https://petition.parliament.uk/petitions.json failed: ProxyError: HTTPSConnectionPool(host='petition.parliament.uk', port=443): Max retries exceeded with url: /petitions.json?state=open&page=1 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Fo",
+  "items": []
+}

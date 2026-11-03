@@ -1,0 +1,34 @@
+{% macro icon(name, cls="ico") -%}
+<svg class="{{ cls }}" aria-hidden="true" focusable="false"><use href="#i-{{ name }}"></use></svg>
+{%- endmacro %}
+
+{% macro source(s, fallback_url="") -%}
+<p class="src">
+  {{ icon("info", "ico ico-sm") }}
+  <span>Source:
+  {% if s.sourceUrl or fallback_url %}<a href="{{ s.sourceUrl or fallback_url }}">{{ s.source or "see link" }}</a>{% else %}{{ s.source or "—" }}{% endif %}
+  {% if s.retrievedDisplay %} · retrieved {{ s.retrievedDisplay }}{% endif %}</span>
+</p>
+{% if s.status == "stale" %}
+<p class="notice notice-warn" role="status">{{ icon("clock", "ico ico-sm") }}
+  <span>We couldn't refresh this today, so you're seeing the last good update from <strong>{{ s.retrievedDisplay }}</strong>.</span></p>
+{% elif s.status == "pending" %}
+<p class="notice" role="status">{{ icon("clock", "ico ico-sm") }}
+  <span>This section fills automatically at the next daily update (07:00).
+  {% if s.sourceUrl or fallback_url %} Meanwhile, see <a href="{{ s.sourceUrl or fallback_url }}">the original source</a>.{% endif %}</span></p>
+{% endif %}
+{%- endmacro %}
+
+{% macro head(id, title, ic, kicker="", tone="") -%}
+<header class="sec-head {{ tone }}">
+  <span class="sec-ico">{{ icon(ic) }}</span>
+  <div>
+    {% if kicker %}<p class="kicker">{{ kicker }}</p>{% endif %}
+    <h2 id="{{ id }}-h">{{ title }}</h2>
+  </div>
+</header>
+{%- endmacro %}
+
+{% macro empty(msg) -%}
+<p class="empty">{{ msg }}</p>
+{%- endmacro %}

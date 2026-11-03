@@ -1,0 +1,14 @@
+{
+  "key": "diary",
+  "label": "Meetings & events diary",
+  "source": "MP's office diary",
+  "sourceUrl": "",
+  "status": "not-configured",
+  "retrieved": "2026-11-03T01:39:50.711053+00:00",
+  "retrievedDisplay": "3 November 2026, 01:39",
+  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
+  "items": [],
+  "past": [],
+  "sources": [],
+  "note": "The office diary has not been connected yet."
+}

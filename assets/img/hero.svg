@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 420" preserveAspectRatio="xMidYMax slice">
+  <!-- Original illustration: a Black Country skyline – castle on a wooded hill, spires, terraces, a chimney and the canal -->
+  <defs>
+    <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b5b8f"/><stop offset="1" stop-color="#244d7c"/></linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f466f"/><stop offset="1" stop-color="#1a3a5e"/></linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a74b0"/><stop offset="1" stop-color="#2b5b8f"/></linearGradient>
+  </defs>
+  <circle cx="1330" cy="110" r="46" fill="#f2b13c" opacity=".9"/>
+  <circle cx="1330" cy="110" r="70" fill="#f2b13c" opacity=".12"/>
+  <!-- far hills -->
+  <path d="M0 250 C160 190 300 210 420 230 S700 180 860 215 1160 170 1320 205 1520 200 1600 190 V420 H0Z" fill="url(#hill1)" opacity=".75"/>
+  <!-- castle hill -->
+  <path d="M180 300 C260 200 330 170 420 165 C510 160 560 205 640 300Z" fill="#1c4370"/>
+  <g fill="#173a62">
+    <circle cx="250" cy="250" r="26"/><circle cx="290" cy="225" r="30"/><circle cx="330" cy="205" r="26"/>
+    <circle cx="560" cy="240" r="30"/><circle cx="600" cy="268" r="26"/><circle cx="520" cy="215" r="24"/>
+  </g>
+  <!-- castle keep -->
+  <g fill="#122f52">
+    <path d="M375 168 v-58 h10 v-10 h12 v10 h12 v-10 h12 v10 h12 v-10 h12 v10 h10 v58z"/>
+    <rect x="342" y="140" width="34" height="30"/><path d="M342 140 v-10 h8 v6 h8 v-6 h8 v6 h8 v-6 h2 v10z"/>
+    <rect x="464" y="132" width="40" height="38"/><path d="M464 132 v-10 h8 v6 h8 v-6 h8 v6 h8 v-6 h8 v10z"/>
+  </g>
+  <g fill="#f2b13c" opacity=".85"><rect x="401" y="126" width="6" height="12" rx="3"/><rect x="421" y="126" width="6" height="12" rx="3"/><rect x="480" y="146" width="6" height="10" rx="3"/></g>
+  <!-- town: spire, terraces, chimney -->
+  <path d="M0 330 L0 300 L60 300 L60 285 L90 270 L120 285 L120 300 L180 300 Z" fill="url(#hill2)"/>
+  <g fill="#173a62">
+    <path d="M700 330 V265 l30-20 30 20 v65z"/>
+    <path d="M760 330 V270 l25-16 25 16 v60z"/>
+    <path d="M810 330 V262 l28-18 28 18 v68z"/>
+    <path d="M866 330 V268 l26-18 26 18 v62z"/>
+    <rect x="930" y="210" width="26" height="120"/><path d="M928 210 h30 v-8 h-30z"/>
+    <path d="M985 330 V240 h40 v90z"/><path d="M997 240 l8 -110 l8 110z"/>
+    <path d="M1040 330 V275 l24-16 24 16 v55z"/><path d="M1088 330 V270 l26-17 26 17 v60z"/>
+    <path d="M1140 330 V262 l30-18 30 18 v68z"/>
+  </g>
+  <path d="M943 200 c-12-20 6-30 -6-52 c20 6 24 26 14 52z" fill="#dbe6f7" opacity=".25"/>
+  <g fill="#f2b13c" opacity=".9">
+    <rect x="718" y="285" width="9" height="11" rx="2"/><rect x="738" y="285" width="9" height="11" rx="2"/>
+    <rect x="776" y="290" width="9" height="11" rx="2"/><rect x="828" y="282" width="9" height="11" rx="2"/>
+    <rect x="848" y="300" width="9" height="11" rx="2"/><rect x="884" y="292" width="9" height="11" rx="2"/>
+    <rect x="1001" y="270" width="8" height="14" rx="4"/><rect x="1058" y="292" width="9" height="11" rx="2"/>
+    <rect x="1106" y="288" width="9" height="11" rx="2"/><rect x="1162" y="282" width="9" height="11" rx="2"/>
+  </g>
+  <!-- right hills + trees -->
+  <path d="M1180 330 C1260 260 1380 250 1470 270 C1530 282 1570 290 1600 300 V330Z" fill="#1c4370"/>
+  <g fill="#163659"><circle cx="1260" cy="300" r="22"/><circle cx="1295" cy="285" r="26"/><circle cx="1335" cy="298" r="20"/><circle cx="1480" cy="290" r="24"/><circle cx="1520" cy="300" r="20"/></g>
+  <!-- canal -->
+  <path d="M0 330 H1600 V420 H0Z" fill="#163659"/>
+  <path d="M0 352 C300 345 600 360 900 352 S1400 345 1600 352 V392 C1300 386 1000 398 700 392 S200 386 0 392Z" fill="url(#water)"/>
+  <g stroke="#dbe6f7" stroke-width="3" stroke-linecap="round" opacity=".35">
+    <path d="M120 372 h60"/><path d="M420 380 h40"/><path d="M980 368 h70"/><path d="M1380 378 h50"/>
+  </g>
+  <!-- narrowboat -->
+  <g transform="translate(560 336)">
+    <path d="M0 22 h230 c10 0 16 6 18 12 H-8 c2-7 4-12 -10-12z" fill="#0f2747"/>
+    <rect x="20" y="4" width="180" height="20" rx="3" fill="#b45309"/>
+    <rect x="20" y="4" width="180" height="5" fill="#f2b13c"/>
+    <g fill="#fff3d6"><rect x="40" y="12" width="14" height="8" rx="2"/><rect x="70" y="12" width="14" height="8" rx="2"/><rect x="100" y="12" width="14" height="8" rx="2"/><rect x="130" y="12" width="14" height="8" rx="2"/></g>
+    <rect x="166" y="-8" width="6" height="14" fill="#0f2747"/>
+  </g>
+  <!-- towpath -->
+  <path d="M0 400 C400 396 800 404 1200 398 S1500 400 1600 400 V420 H0Z" fill="#0f1e38"/>
+</svg>

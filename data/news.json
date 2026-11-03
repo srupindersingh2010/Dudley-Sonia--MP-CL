@@ -1,0 +1,12 @@
+{
+  "key": "news",
+  "label": "Local news",
+  "source": "RSS feeds (see list)",
+  "sourceUrl": "https://news.google.com/",
+  "status": "pending",
+  "retrieved": null,
+  "retrievedDisplay": null,
+  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
+  "lastError": "RuntimeError: Sonia Kumar MP website: https://sonia-kumar.co.uk/feed/ failed: ProxyError: HTTPSConnectionPool(host='sonia-kumar.co.uk'; Google News – Sonia Kumar: https://news.google.com/rss/search?q=%22Sonia%20Kumar%22%20(MP%20OR%20Dudley)%20 failed: Prox; Express & Star: https://www.expressandstar",
+  "items": []
+}

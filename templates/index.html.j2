@@ -1,0 +1,582 @@
+{% from "_macros.j2" import icon, source, head, empty %}
+{% set p = d.profile %}
+{% set mp = cfg.mp %}
+<!DOCTYPE html>
+<html lang="en-GB" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ cfg.site.title }}</title>
+<meta name="description" content="Your guide to Dudley's MP, {{ mp.name }}: how to get help, surgeries and events, what she's doing in Parliament, local council meetings, policing and useful services. Updated every morning.">
+<meta name="theme-color" content="#14284b">
+<meta property="og:title" content="{{ cfg.site.title }}">
+<meta property="og:description" content="Surgeries, events, Parliament activity, local meetings, policing and help – for everyone in the Dudley constituency.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css?v={{ built|replace(' ', '')|replace(',', '')|replace(':','') }}">
+</head>
+<body>
+{% include "_icons.j2" %}
+<a class="skip" href="#main">Skip to main content</a>
+
+<aside class="ribbon" aria-label="About this website">
+  <div class="wrap">
+    {{ icon("info", "ico ico-sm") }}
+    <span><strong>Independent information site</strong> – not the official website of {{ mp.name }} MP or the House of Commons. <a href="#about-site">Who runs this?</a></span>
+  </div>
+</aside>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top" aria-label="{{ cfg.site.shortTitle }} – back to top">
+      <span class="brand-mark" aria-hidden="true">D</span>
+      <span class="brand-txt"><span class="brand-1">Dudley</span><span class="brand-2">Your MP &amp; your area</span></span>
+    </a>
+    <nav aria-label="Main">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+      <ul id="nav-list" class="nav-list">
+        <li><a href="#contact">Get help</a></li>
+        <li><a href="#diary">Diary</a></li>
+        <li><a href="#parliament">In Parliament</a></li>
+        <li><a href="#local">Local meetings</a></li>
+        <li><a href="#safety">Safety</a></li>
+        <li><a href="#area">Our area</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#help">Useful links</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- ========================= HERO ========================= -->
+<section class="hero" id="top" aria-labelledby="hero-h">
+  <div class="hero-art" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hero-photo">
+      {% if has_photo %}
+        <img src="{{ mp.photo }}" alt="{{ mp.photoAlt }}" width="320" height="320" fetchpriority="high">
+        {% if mp.photoCredit %}<p class="credit">Photo: {{ mp.photoCredit }}</p>{% endif %}
+      {% else %}
+        <div class="photo-ph" role="img" aria-label="Photo of {{ mp.name }} to be supplied by her office">
+          <span>SK</span>
+        </div>
+      {% endif %}
+    </div>
+    <div class="hero-txt">
+      <p class="hello">Welcome to your guide to</p>
+      <h1 id="hero-h">{{ p.name or mp.name }} <span>MP for {{ p.constituency or mp.constituency }}</span></h1>
+      <ul class="chips" aria-label="Key facts">
+        <li>{{ p.party or mp.party }}</li>
+        <li>MP since {{ p.memberSinceDisplay or "4 Jul 2024" }}</li>
+        {% if p.election and p.election.majority %}<li>Majority {{ p.election.majority|num }}</li>{% endif %}
+      </ul>
+      <p class="lede">Everything in one friendly place: how to get help, where to meet Sonia, what she's doing in Parliament, and what's happening across Dudley town, Kates Hill, Sedgley, Gornal, Woodsetton, Brockmoor and Pensnett.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#contact">{{ icon("mail") }} Contact the office</a>
+        <a class="btn btn-ghost" href="#diary">{{ icon("calendar") }} Surgeries &amp; events</a>
+      </div>
+      <p class="updated">{{ icon("clock", "ico ico-sm") }} Updated every morning · last update {{ status.updatedDisplay or built }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FIND IT FAST ===================== -->
+<section class="wrap quick" aria-labelledby="quick-h">
+  <h2 id="quick-h" class="center-h">What do you need today?</h2>
+  <ul class="tiles">
+    {% set tiles = [
+      ("contact","mail","Get help from Sonia","Casework, surgeries, contact","t1"),
+      ("diary","calendar","Meet Sonia","Surgeries, coffee mornings, events","t2"),
+      ("votes","vote","How Sonia voted","Recent Commons votes","t3"),
+      ("speeches","mic","Speeches","What she said in Parliament","t4"),
+      ("petitions","petition","Petitions","What Dudley is signing","t5"),
+      ("local","building","Council meetings","Next 30 days","t6"),
+      ("safety","shield","Crime & safety","Your police team & stats","t7"),
+      ("area","chart","Dudley in numbers","People, work, health, homes","t8"),
+      ("news","news","Local news","Stories about Sonia & Dudley","t9"),
+      ("events","ticket","Things to do","Events across the borough","t10"),
+      ("help","heart","Get support","Council, NHS, benefits, food","t11"),
+      ("gallery","camera","Photos","Out and about in Dudley","t12")] %}
+    {% for id, ic, t, s, cls in tiles %}
+    <li><a class="tile {{ cls }}" href="#{{ id }}"><span class="tile-ico">{{ icon(ic) }}</span><span class="tile-t">{{ t }}</span><span class="tile-s">{{ s }}</span></a></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<!-- ===================== AT A GLANCE ====================== -->
+<section class="glance" aria-labelledby="glance-h">
+  <div class="wrap">
+    <h2 id="glance-h" class="visually-hidden">Sonia Kumar at a glance</h2>
+    <ul class="stats">
+      <li><span class="stat-n">{{ d.votes.attendanceRate ~ "%" if d.votes.attendanceRate is not none and d.votes.attendanceRate is defined else "—" }}</span><span class="stat-l">of Commons votes taken part in{% if d.votes.totalDivisions %} ({{ d.votes.votedCount|num }} of {{ d.votes.totalDivisions|num }}){% endif %}</span></li>
+      <li><span class="stat-n">{{ d.speeches.total|num if d.speeches.total else "—" }}</span><span class="stat-l">spoken contributions in Hansard</span></li>
+      <li><span class="stat-n">{{ d.questions.total|num if d.questions.total else "—" }}</span><span class="stat-l">written questions asked</span></li>
+      <li><span class="stat-n">{{ d.edms.total|num if d.edms.total else "—" }}</span><span class="stat-l">Early Day Motions tabled or signed</span></li>
+    </ul>
+    <p class="glance-src">Figures from UK Parliament APIs, refreshed daily. <a href="#parliament">See the detail</a>.</p>
+  </div>
+</section>
+
+<!-- ======================= ABOUT ========================== -->
+<section class="wrap sec" id="about" aria-labelledby="about-h">
+  {{ head("about", "About Sonia Kumar", "star", "Your Member of Parliament") }}
+  <div class="grid-2">
+    <div class="card">
+      <h3>Biography</h3>
+      <p>{{ mp.bio }}</p>
+      {% if p.synopsis %}<p class="muted">{{ p.synopsis }}</p>{% endif %}
+      <dl class="facts">
+        <div><dt>Constituency</dt><dd>{{ p.constituency or mp.constituency }}</dd></div>
+        <div><dt>Party</dt><dd>{{ p.party or mp.party }}</dd></div>
+        <div><dt>Elected</dt><dd>{{ p.memberSinceDisplay or "4 Jul 2024" }}{% if p.election and p.election.name %} ({{ p.election.name }}){% endif %}</dd></div>
+        {% if p.election %}
+        <div><dt>Majority</dt><dd>{{ p.election.majority|num }} votes</dd></div>
+        {% if p.election.turnout and p.election.electorate %}<div><dt>Turnout</dt><dd>{{ p.election.turnout|num }} of {{ p.election.electorate|num }} electors</dd></div>{% endif %}
+        {% endif %}
+      </dl>
+      <p><a href="{{ p.profileUrl or mp.parliamentProfile }}">Official UK Parliament profile {{ icon("ext", "ico ico-xs") }}</a></p>
+    </div>
+    <div class="card">
+      <h3>Current roles</h3>
+      {% if p.roles %}
+      <ul class="roles">
+        {% for r in p.roles %}<li><span class="tag">{{ r.type }}</span> {{ r.name }}{% if r.since %} <span class="muted">· since {{ r.since }}</span>{% endif %}</li>{% endfor %}
+      </ul>
+      {% else %}{{ empty("Committee and other roles appear here after the first daily update.") }}{% endif %}
+      {% if p.pastCommittees %}
+      <details class="more"><summary>Previous committee roles ({{ p.pastCommittees|length }})</summary>
+        <ul class="roles">{% for r in p.pastCommittees %}<li>{{ r.name }} <span class="muted">· {{ r.from }} – {{ r.to }}</span></li>{% endfor %}</ul>
+      </details>
+      {% endif %}
+      <h4>All-Party Parliamentary Groups</h4>
+      <p class="muted">APPG memberships are not in the Parliament data feed. See the official <a href="https://www.parliament.uk/mps-lords-and-offices/standards-and-financial-interests/parliamentary-commissioner-for-standards/registers-of-interests/register-of-all-party-party-parliamentary-groups/">Register of All-Party Parliamentary Groups</a>.</p>
+      {% if p.election and p.election.candidates %}
+      <details class="more"><summary>{{ p.election.name or "Last election" }} – full result</summary>
+        <table class="tbl"><caption class="visually-hidden">Election result</caption>
+          <thead><tr><th scope="col">Candidate</th><th scope="col">Party</th><th scope="col" class="r">Votes</th><th scope="col" class="r">Share</th></tr></thead>
+          <tbody>{% for c in p.election.candidates %}<tr><td>{{ c.name }}</td><td>{{ c.party }}</td><td class="r">{{ c.votes|num }}</td><td class="r">{{ c.share }}{% if c.share %}%{% endif %}</td></tr>{% endfor %}</tbody>
+        </table>
+      </details>
+      {% endif %}
+    </div>
+  </div>
+  {{ source(d.profile) }}
+</section>
+
+<!-- ====================== CONTACT ========================= -->
+<section class="band band-warm" id="contact" aria-labelledby="contact-h">
+<div class="wrap sec">
+  {{ head("contact", "Get help from Sonia's office", "mail", "Contact & surgeries") }}
+  <div class="grid-3">
+    <div class="card card-contact">
+      <h3>{{ icon("pin") }} Constituency office</h3>
+      <p class="big">{{ cfg.contact.address }}</p>
+      <p><a class="btn btn-navy btn-block" href="tel:{{ cfg.contact.phone|replace(' ', '') }}">{{ icon("phone") }} {{ cfg.contact.phone }}</a></p>
+      <p><a class="btn btn-navy btn-block" href="mailto:{{ cfg.contact.email }}">{{ icon("mail") }} Email the office</a></p>
+      <p class="muted small">{{ cfg.contact.email }}<br>Westminster: {{ cfg.contact.westminster }}</p>
+    </div>
+    <div class="card">
+      <h3>{{ icon("calendar") }} Book a surgery</h3>
+      <p>{{ cfg.contact.surgeries }}</p>
+      <p><a href="#diary">See upcoming surgeries and coffee mornings</a></p>
+    </div>
+    <div class="card card-note">
+      <h3>{{ icon("info") }} Before you get in touch</h3>
+      <ul class="ticks">
+        <li>Sonia can only take up <strong>casework for people who live in the Dudley constituency</strong>. Not sure? <a href="{{ cfg.contact.findYourMp }}">Find your MP</a>.</li>
+        <li>Always include your <strong>full name, home address and postcode</strong>.</li>
+        <li>For bins, potholes or council tax, <a href="#help">contact the council directly</a> – it's quicker.</li>
+        <li>This site does not collect your details. Please use the <a href="{{ cfg.contact.officialRoute }}">official contact details</a>.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="follow">
+    <h3>Follow Sonia</h3>
+    <ul class="follow-list">
+      <li><a href="{{ mp.website }}">{{ icon("globe") }}<span>Website<small>sonia-kumar.co.uk</small></span></a></li>
+      {% for s in mp.socials %}<li><a href="{{ s.url }}">{{ icon("share") }}<span>{{ s.name }}<small>{{ s.handle }}</small></span></a></li>{% endfor %}
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- ======================= DIARY ========================== -->
+<section class="wrap sec" id="diary" aria-labelledby="diary-h">
+  {{ head("diary", "Meetings & events diary", "calendar", "Meet Sonia locally") }}
+  {% set dy = d.diary %}
+  {% if dy.status == "not-configured" and not dy.items %}
+    <div class="card card-soon">
+      <p class="soon-t">{{ icon("calendar") }} Sonia's diary is coming soon</p>
+      <p>Surgeries, coffee mornings, visits and public events will appear here once her office connects their calendar. In the meantime, email <a href="mailto:{{ cfg.contact.email }}">{{ cfg.contact.email }}</a> to ask about the next surgery.</p>
+    </div>
+  {% else %}
+    <div class="seg" role="group" aria-label="Show events">
+      <button type="button" class="seg-btn" aria-pressed="true" data-show="upcoming">Next 30 days ({{ dy["items"]|length }})</button>
+      <button type="button" class="seg-btn" aria-pressed="false" data-show="past">Past events ({{ (dy.past or [])|length }})</button>
+    </div>
+    <div data-panel="upcoming">
+      {% if dy["items"] %}
+      <ol class="events">
+        {% for e in dy["items"] %}
+        <li class="event cat-{{ e.category|lower|replace(' ', '-') }}">
+          <div class="ev-date" aria-hidden="true"><span>{{ e.date|nicedate("%b") }}</span><strong>{{ e.date|nicedate("%-d") }}</strong><span>{{ e.date|nicedate("%a") }}</span></div>
+          <div class="ev-body">
+            <p class="ev-cat">{{ e.category }}</p>
+            <h3>{{ e.title }}</h3>
+            <p class="ev-meta"><span class="visually-hidden">{{ e.dateDisplay }}, </span>{% if e.time %}{{ icon("clock","ico ico-sm") }} {{ e.time }}{% endif %}{% if e.location %} &nbsp;{{ icon("pin","ico ico-sm") }} {{ e.location }}{% endif %}</p>
+            {% if e.description %}<p>{{ e.description }}</p>{% endif %}
+            {% if e.booking %}<p><a href="{{ e.booking }}">How to book</a></p>{% endif %}
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+      {% else %}{{ empty("No public events are listed for the next 30 days. Check back soon.") }}{% endif %}
+    </div>
+    <div data-panel="past" hidden>
+      {% if dy.past %}
+      <ul class="past-list">{% for e in dy.past %}<li><strong>{{ e.dateDisplay }}</strong> – {{ e.title }}{% if e.location %} <span class="muted">({{ e.location }})</span>{% endif %}</li>{% endfor %}</ul>
+      {% else %}{{ empty("Past events will be archived here.") }}{% endif %}
+    </div>
+  {% endif %}
+  <p class="src">{{ icon("info", "ico ico-sm") }} <span>Source: diary maintained by the MP's office{% if dy.sources %} ({{ dy.sources|join(", ") }}){% endif %}{% if dy.retrievedDisplay %} · retrieved {{ dy.retrievedDisplay }}{% endif %}</span></p>
+</section>
+
+<!-- ===================== PARLIAMENT ======================= -->
+<section class="band band-parl" id="parliament" aria-labelledby="parliament-h">
+<div class="wrap sec">
+  {{ head("parliament", "Sonia in Parliament", "scroll", "Official parliamentary record", "on-dark") }}
+  <p class="on-dark-p">Factual information from UK Parliament's own data, updated every morning. Links take you to the official record.</p>
+
+  <div class="tabs" data-tabs>
+    <div class="tablist" role="tablist" aria-label="Parliamentary activity">
+      {% for id, label, ic in [("whatson","This week","calendar"),("votes","Votes","vote"),("speeches","Speeches","mic"),("questions","Written questions","question"),("edms","Early Day Motions","petition"),("bills","Bills","scroll")] %}
+      <button role="tab" id="tab-{{ id }}" aria-controls="{{ id }}" aria-selected="{{ 'true' if loop.first else 'false' }}" tabindex="{{ '0' if loop.first else '-1' }}">{{ icon(ic, "ico ico-sm") }} {{ label }}</button>
+      {% endfor %}
+    </div>
+
+    <div class="tabpanel card" role="tabpanel" id="whatson" aria-labelledby="tab-whatson">
+      <h3>In the House of Commons this week</h3>
+      {% if d.whatson.days %}
+        {% for day in d.whatson.days %}
+        <h4 class="day-h">{{ day.display }}</h4>
+        <ul class="bus">{% for e in day.events %}<li>{% if e.time %}<span class="t">{{ e.time }}</span>{% endif %}<span><strong>{{ e.title }}</strong>{% if e.category %} <span class="muted">· {{ e.category }}</span>{% endif %}{% if e.involvesMp %} <span class="tag tag-gold">Sonia taking part</span>{% endif %}</span></li>{% endfor %}</ul>
+        {% endfor %}
+      {% else %}{{ empty(d.whatson.note or "Commons business for the week appears here.") }}{% endif %}
+      <p><a href="https://whatson.parliament.uk/commons/">Full Commons calendar on What's On {{ icon("ext","ico ico-xs") }}</a></p>
+      {{ source(d.whatson) }}
+    </div>
+
+    <div class="tabpanel card" role="tabpanel" id="votes" aria-labelledby="tab-votes">
+      <h3>How Sonia voted recently</h3>
+      {% if d.votes.attendanceRate is defined and d.votes.attendanceRate is not none %}
+      <div class="meter" role="img" aria-label="Took part in {{ d.votes.attendanceRate }}% of divisions">
+        <div class="meter-bar"><span style="width: {{ d.votes.attendanceRate }}%"></span></div>
+        <p><strong>{{ d.votes.attendanceRate }}%</strong> of Commons divisions since {{ d.votes.since|nicedate }} ({{ d.votes.votedCount|num }} of {{ d.votes.totalDivisions|num }})</p>
+      </div>
+      <p class="muted small">{{ d.votes.note }}</p>
+      {% endif %}
+      {% if d.votes["items"] %}
+      <div class="tbl-wrap"><table class="tbl">
+        <caption class="visually-hidden">Recent divisions and how Sonia Kumar voted</caption>
+        <thead><tr><th scope="col">Date</th><th scope="col">Division</th><th scope="col">Sonia voted</th><th scope="col" class="r">Ayes</th><th scope="col" class="r">Noes</th></tr></thead>
+        <tbody>{% for v in d.votes["items"] %}
+          <tr><td class="nw">{{ v.dateDisplay }}</td><td><a href="{{ v.url }}">{{ v.title }}</a></td><td><span class="vote vote-{{ v.vote|lower }}">{{ v.vote }}</span></td><td class="r">{{ v.ayes }}</td><td class="r">{{ v.noes }}</td></tr>
+        {% endfor %}</tbody>
+      </table></div>
+      {% else %}{{ empty("Recent votes appear here after the daily update.") }}{% endif %}
+      {{ source(d.votes) }}
+    </div>
+
+    <div class="tabpanel card" role="tabpanel" id="speeches" aria-labelledby="tab-speeches">
+      <h3>Latest speeches and contributions</h3>
+      {% if d.speeches["items"] %}
+      <ul class="feed">{% for s in d.speeches["items"] %}
+        <li><p class="feed-meta">{{ s.dateDisplay }}</p><h4><a href="{{ s.url }}">{{ s.debate }}</a></h4>{% if s.excerpt %}<p>“{{ s.excerpt }}”</p>{% endif %}</li>
+      {% endfor %}</ul>
+      {% else %}{{ empty("Recent Hansard contributions appear here after the daily update.") }}{% endif %}
+      <p><a href="{{ d.speeches.allUrl or 'https://hansard.parliament.uk/search/MemberContributions?memberId=5274' }}">All contributions in Hansard {{ icon("ext","ico ico-xs") }}</a></p>
+      {{ source(d.speeches) }}
+    </div>
+
+    <div class="tabpanel card" role="tabpanel" id="questions" aria-labelledby="tab-questions">
+      <h3>Written questions and answers</h3>
+      {% if d.questions["items"] %}
+      <ul class="feed">{% for q in d.questions["items"] %}
+        <li><p class="feed-meta">{{ q.tabledDisplay }} · to {{ q.department }}{% if q.answered %} · answered {{ q.answered }}{% else %} · <span class="tag">Awaiting answer</span>{% endif %}</p>
+          <h4><a href="{{ q.url }}">{{ q.heading or ("Question " ~ q.uin) }}</a></h4>
+          <p>{{ q.question }}</p>
+          {% if q.answer %}<details class="more"><summary>Read the answer</summary><p>{{ q.answer }}</p></details>{% endif %}
+        </li>
+      {% endfor %}</ul>
+      {% else %}{{ empty("Written questions appear here after the daily update.") }}{% endif %}
+      {{ source(d.questions) }}
+    </div>
+
+    <div class="tabpanel card" role="tabpanel" id="edms" aria-labelledby="tab-edms">
+      <h3>Early Day Motions tabled or signed</h3>
+      <p class="muted small">Early Day Motions are formal motions MPs table to draw attention to an issue. Signing one shows support; they are rarely debated.</p>
+      {% if d.edms["items"] %}
+      <ul class="feed">{% for e in d.edms["items"] %}
+        <li><p class="feed-meta">{{ e.dateDisplay }} · <span class="tag {{ 'tag-gold' if e.role == 'Tabled' else '' }}">{{ e.role }}</span>{% if e.signatures %} · {{ e.signatures }} signatures{% endif %}</p>
+        <h4><a href="{{ e.url }}">{{ e.title }}</a></h4>{% if e.role == "Signed" and e.sponsor %}<p class="muted small">Tabled by {{ e.sponsor }}</p>{% endif %}</li>
+      {% endfor %}</ul>
+      {% else %}{{ empty("Early Day Motions appear here after the daily update.") }}{% endif %}
+      {{ source(d.edms) }}
+    </div>
+
+    <div class="tabpanel card" role="tabpanel" id="bills" aria-labelledby="tab-bills">
+      <h3>Bills sponsored or co-sponsored</h3>
+      {% if d.bills["items"] %}
+      <ul class="feed">{% for b in d.bills["items"] %}<li><h4><a href="{{ b.url }}">{{ b.title }}</a></h4><p class="feed-meta">{{ b.stage }} · {{ b.house }} · updated {{ b.updated }}</p></li>{% endfor %}</ul>
+      {% else %}{{ empty(d.bills.note or "Bills appear here after the daily update.") }}{% endif %}
+      {{ source(d.bills) }}
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ============ INTERESTS + PETITIONS ===================== -->
+<div class="wrap grid-2 sec">
+<section id="interests" aria-labelledby="interests-h">
+  {{ head("interests", "Register of financial interests", "scale", "Transparency") }}
+  <div class="card">
+    <p class="muted small">MPs must declare interests such as donations, gifts, employment and property. This is the official register, shown as published.</p>
+    {% if d.interests.byCategory %}
+      {% for g in d.interests.byCategory %}
+      <details class="more" {% if loop.first %}open{% endif %}><summary>{{ g.category }} ({{ g["items"]|length }})</summary>
+        <ul class="plain">{% for i in g["items"] %}<li>{{ i.summary }} <span class="muted small">· registered {{ i.registered }}</span></li>{% endfor %}</ul>
+      </details>
+      {% endfor %}
+    {% else %}{{ empty("Register entries appear here after the daily update.") }}{% endif %}
+    <p><a href="{{ d.interests.registerUrl or 'https://members.parliament.uk/member/5274/registeredinterests' }}">Full register entry {{ icon("ext","ico ico-xs") }}</a></p>
+    {{ source(d.interests) }}
+  </div>
+</section>
+<section id="petitions" aria-labelledby="petitions-h">
+  {{ head("petitions", "What Dudley is signing", "petition", "Parliament petitions") }}
+  <div class="card">
+    {% if d.petitions["items"] %}
+    {% set top = d.petitions["items"][0].local or 1 %}
+    <ol class="pet">{% for t in d.petitions["items"][:10] %}
+      <li><a href="{{ t.url }}">{{ t.title }}</a>
+        <div class="pet-bar" aria-hidden="true"><span style="width: {{ (100 * (t.local or 0) / top)|round(1) }}%"></span></div>
+        <p class="small"><strong>{{ t.local|num }}</strong> from Dudley · {{ t.total|num }} nationally{% if t.response %} · <span class="tag">Govt responded</span>{% endif %}{% if t.debate %} · <span class="tag">Debated</span>{% endif %}</p></li>
+    {% endfor %}</ol>
+    <p class="muted small">{{ d.petitions.note }}</p>
+    {% else %}{{ empty("The most-signed petitions in Dudley appear here after the daily update.") }}{% endif %}
+    <p><a href="https://petition.parliament.uk/">Start or sign a petition {{ icon("ext","ico ico-xs") }}</a></p>
+    {{ source(d.petitions) }}
+  </div>
+</section>
+</div>
+
+<!-- ===================== LOCAL MEETINGS =================== -->
+<section class="band band-soft" id="local" aria-labelledby="local-h">
+<div class="wrap sec">
+  {{ head("local", "Local decision-making – next 30 days", "building", "Council & combined authority") }}
+  <div class="grid-2">
+    {% for key, title, link in [("council", "Dudley Council meetings", cfg.council.meetingsPage), ("wmca", "West Midlands Combined Authority", "https://governance.wmca.org.uk/mgCalendarMonthView.aspx")] %}
+    {% set m = d[key] %}
+    <div class="card">
+      <h3>{{ title }}</h3>
+      {% if m["items"] %}
+      <ul class="meet">{% for x in m["items"][:14] %}
+        <li><span class="meet-d">{{ x.dateDisplay }}{% if x.time %}<br><small>{{ x.time }}</small>{% endif %}</span><a href="{{ x.url }}">{{ x.title }}</a></li>
+      {% endfor %}</ul>
+      {% if m["items"]|length > 14 %}<p class="small"><a href="{{ m.calendarUrl }}">See all {{ m["items"]|length }} meetings</a></p>{% endif %}
+      {% else %}{{ empty(m.note or "Upcoming meetings appear here after the daily update.") }}{% endif %}
+      <p><a href="{{ m.calendarUrl or link }}">Full calendar and papers {{ icon("ext","ico ico-xs") }}</a></p>
+      {{ source(m, link) }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</section>
+
+<!-- ======================= SAFETY ========================= -->
+<section class="wrap sec" id="safety" aria-labelledby="safety-h">
+  {{ head("safety", "Policing & community safety", "shield", cfg.police.forceName) }}
+  {% set pl = d.police %}
+  <div class="callout">{{ icon("alert") }} <p><strong>Emergency? Call 999.</strong> Non-emergency: call 101 or <a href="https://www.westmidlands.police.uk/">report online to West Midlands Police</a>. Report anonymously via <a href="https://crimestoppers-uk.org/">Crimestoppers</a>.</p></div>
+  {% if pl.categories %}
+  <div class="grid-2">
+    <div class="card">
+      <h3>Reported crime, {{ pl.monthDisplay }}</h3>
+      <p class="hero-n">{{ pl.total|num }} <small>crimes and ASB reports</small></p>
+      {% set mx = pl.categories[0].count or 1 %}
+      <table class="bars">
+        <caption class="visually-hidden">Crimes by type, {{ pl.monthDisplay }}</caption>
+        <thead class="visually-hidden"><tr><th scope="col">Type</th><th scope="col">Number</th></tr></thead>
+        <tbody>{% for c in pl.categories[:10] %}
+          <tr><th scope="row">{{ c.category }}</th><td><span class="bar" style="width: {{ (78 * c.count / mx)|round(1) }}%"></span><span class="bar-v">{{ c.count|num }}</span></td></tr>
+        {% endfor %}</tbody>
+      </table>
+    </div>
+    <div class="card">
+      <h3>Six-month trend</h3>
+      {% set tmx = (pl.trend|map(attribute="count")|max) or 1 %}
+      <div class="cols" role="img" aria-label="Monthly totals: {% for t in pl.trend %}{{ t.month }} {{ t.count }}{{ ', ' if not loop.last }}{% endfor %}">
+        {% for t in pl.trend %}<div class="col"><span class="col-v">{{ t.count|num }}</span><span class="col-b" style="height: {{ (100 * t.count / tmx)|round(1) }}%"></span><span class="col-l">{{ t.month[:3] }}</span></div>{% endfor %}
+      </div>
+      <div class="map-box">
+        <button type="button" class="btn btn-navy" id="load-map">{{ icon("map") }} Show crime map</button>
+        <p class="muted small">The map loads street tiles from OpenStreetMap only when you press the button.</p>
+        <div id="crime-map" class="map" hidden aria-label="Map of reported crime locations, {{ pl.monthDisplay }}"></div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  {% if pl.teams %}
+  <h3 class="sub-h">Your neighbourhood policing teams</h3>
+  <div class="grid-3">
+    {% for t in pl.teams %}
+    <div class="card team">
+      <h4>{{ t.name }}</h4>
+      <p class="muted small">Covers places including {{ t.places|join(", ") }}</p>
+      {% if t.priorities %}<p class="lbl">Current priorities</p><ul class="plain small">{% for pr in t.priorities %}<li>{{ pr.issue[:220] }}</li>{% endfor %}</ul>{% endif %}
+      {% if t.officers %}<details class="more"><summary>Team ({{ t.officers|length }})</summary><ul class="plain small">{% for o in t.officers %}<li>{{ o.name }} – {{ o.rank }}</li>{% endfor %}</ul></details>{% endif %}
+      {% if t.events %}<p class="lbl">Upcoming police events</p><ul class="plain small">{% for e in t.events %}<li>{{ e.start|nicedt }} – {{ e.title }}{% if e.address %} ({{ e.address }}){% endif %}</li>{% endfor %}</ul>{% endif %}
+      <p class="small">{% if t.email %}<a href="mailto:{{ t.email }}">Email the team</a> · {% endif %}<a href="{{ t.url }}">Team page {{ icon("ext","ico ico-xs") }}</a></p>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% if not pl.categories and not pl.teams %}<div class="card">{{ empty("Crime statistics, the map and your neighbourhood teams appear here after the daily update.") }}</div>{% endif %}
+  {% if pl.note %}<p class="muted small">{{ pl.note }}</p>{% endif %}
+  {{ source(pl) }}
+  {% if d.police_news["items"] %}
+  <h3 class="sub-h">Police news</h3>
+  <ul class="news-list">{% for n in d.police_news["items"][:6] %}<li><a href="{{ n.url }}">{{ n.title }}</a><span class="muted small"> · {{ n.publisher }} · {{ n.publishedDisplay }}</span></li>{% endfor %}</ul>
+  {{ source(d.police_news) }}
+  {% endif %}
+  <p class="small">Get local police alerts by email: <a href="https://www.wmnow.co.uk/">sign up to WMNow</a>.</p>
+</section>
+
+<!-- ======================== AREA ========================== -->
+<section class="band band-soft" id="area" aria-labelledby="area-h">
+<div class="wrap sec">
+  {{ head("area", "Dudley constituency in numbers", "chart", "Constituency profile") }}
+  {% set st = d.stats %}
+  {% if st.stats %}
+  <ul class="stat-cards">{% for s in st.stats %}
+    <li class="card"><p class="lbl">{{ s.group }}</p><p class="hero-n">{{ s.value }}</p><p>{{ s.label }}</p>{% if s.detail %}<p class="muted small">{{ s.detail }}</p>{% endif %}<p class="muted small">{{ s.period }} · <a href="{{ s.url }}">{{ s.source }}</a></p></li>
+  {% endfor %}</ul>
+  {% endif %}
+  {% if st.charts %}
+  <div class="grid-2">{% for ch in st.charts %}
+    <figure class="card chart">
+      <figcaption><span class="lbl">{{ ch.group }}</span><strong>{{ ch.title }}</strong></figcaption>
+      <p class="legend"><span class="sw sw-1"></span> Dudley constituency <span class="sw sw-2"></span> England</p>
+      {% set cmax = (ch.bars|map(attribute="local")|max or 1) %}{% set emax = (ch.bars|map(attribute="england")|select|max or 1) %}{% set top = [cmax, emax]|max %}
+      <table class="hbars">
+        <caption class="visually-hidden">{{ ch.title }}: percentage in Dudley constituency compared with England</caption>
+        <thead class="visually-hidden"><tr><th scope="col">Category</th><th scope="col">Dudley % and England %</th></tr></thead>
+        <tbody>{% for b in ch.bars %}
+        <tr><th scope="row">{{ b.label }}</th>
+          <td><span class="hb-row"><span class="hb hb-1" style="width: {{ (78 * (b.local or 0) / top)|round(1) }}%"></span><span class="hb-v">{{ b.local }}%<span class="visually-hidden"> in Dudley</span></span></span>
+              <span class="hb-row"><span class="hb hb-2" style="width: {{ (78 * (b.england or 0) / top)|round(1) }}%"></span><span class="hb-v">{{ b.england }}%<span class="visually-hidden"> in England</span></span></span></td></tr>
+        {% endfor %}</tbody>
+      </table>
+      <p class="muted small">Source: {{ ch.source }} (dataset {{ ch.dataset }})</p>
+    </figure>
+  {% endfor %}</div>
+  {% endif %}
+  {% if not st.stats and not st.charts %}<div class="card">{{ empty("Population, work, health and housing figures appear here after the daily update.") }}</div>{% endif %}
+  <p>For more detail see the House of Commons Library <a href="https://commonslibrary.parliament.uk/constituency-dashboards/">constituency dashboards {{ icon("ext","ico ico-xs") }}</a>.</p>
+  {{ source(st) }}
+</div>
+</section>
+
+<!-- ======================== NEWS ========================== -->
+<section class="wrap sec" id="news" aria-labelledby="news-h">
+  {{ head("news", "In the news", "news", "Local stories mentioning Sonia") }}
+  {% if d.news["items"] %}
+  <ul class="news-cards">{% for n in d.news["items"][:12] %}
+    <li class="card news-card {{ 'news-lead' if loop.first }}"><p class="feed-meta">{{ n.publisher }} · {{ n.publishedDisplay }}</p><h3><a href="{{ n.url }}">{{ n.title }}</a></h3>{% if n.summary and n.summary != n.title %}<p class="small">{{ n.summary[:200] }}</p>{% endif %}</li>
+  {% endfor %}</ul>
+  {% else %}<div class="card">{{ empty("Local news stories appear here after the daily update.") }}</div>{% endif %}
+  <p class="muted small">Headlines link to the original publishers. Inclusion here is automatic and does not mean endorsement.</p>
+  {{ source(d.news) }}
+</section>
+
+<!-- ======================= GALLERY ======================== -->
+<section class="band band-warm" id="gallery" aria-labelledby="gallery-h">
+<div class="wrap sec">
+  {{ head("gallery", "Out and about in Dudley", "camera", "Photo gallery") }}
+  {% if d.gallery["items"] %}
+  <ul class="gallery">{% for g in d.gallery["items"] %}
+    <li><figure><button type="button" class="g-open" data-src="{{ g.src }}" data-alt="{{ g.alt }}" data-cap="{{ g.caption }}"><img src="{{ g.src }}" alt="{{ g.alt }}" loading="lazy" decoding="async"></button>
+      {% if g.caption %}<figcaption>{{ g.caption }}{% if g.credit %} <span class="muted">· {{ g.credit }}</span>{% endif %}</figcaption>{% endif %}</figure></li>
+  {% endfor %}</ul>
+  <dialog id="lightbox" aria-label="Photo viewer"><form method="dialog"><button class="lb-close" aria-label="Close photo">×</button></form><img alt=""><p></p></dialog>
+  {% else %}
+  <div class="gallery-soon">
+    <div class="ph-grid" aria-hidden="true">{% for i in range(6) %}<span class="ph ph-{{ i }}"></span>{% endfor %}</div>
+    <div class="card card-soon">
+      <p class="soon-t">{{ icon("camera") }} Photos coming soon</p>
+      <p>Pictures from surgeries, school visits, community events and campaigns will appear here once Sonia's office shares them. In the meantime, see her latest photos on <a href="{{ mp.socials[0].url }}">Facebook</a> and <a href="{{ mp.socials[1].url }}">Instagram</a>.</p>
+    </div>
+  </div>
+  {% endif %}
+</div>
+</section>
+
+<!-- ================= EVENTS + HELP ======================== -->
+<section class="wrap sec" id="events" aria-labelledby="events-h">
+  {{ head("events", "Things to do across the borough", "ticket", "Community events") }}
+  <ul class="link-cards">{% for e in c.events %}
+    <li><a class="card link-card" href="{{ e.url }}">{{ icon(e.icon) }}<span><strong>{{ e.label }}</strong><small>{{ e.detail }}</small></span></a></li>
+  {% endfor %}</ul>
+</section>
+
+<section class="band band-soft" id="help" aria-labelledby="help-h">
+<div class="wrap sec">
+  {{ head("help", "Useful links & getting support", "heart", "Help yourself, fast") }}
+  <div class="help-grid">{% for g in c.help %}
+    <div class="card help-card {{ 'help-urgent' if loop.first }}">
+      <h3>{{ icon(g.icon) }} {{ g.group }}</h3>
+      <ul class="plain">{% for l in g.links %}<li><a href="{{ l.url }}">{{ l.label }}</a><br><span class="muted small">{{ l.detail }}</span></li>{% endfor %}</ul>
+    </div>
+  {% endfor %}</div>
+  <div class="card newsletter">
+    <h3>{{ icon("mail") }} Stay in touch</h3>
+    {% if c.newsletter.url %}<p><a class="btn btn-gold" href="{{ c.newsletter.url }}">Sign up for Sonia's newsletter</a></p>{% else %}<p>{{ c.newsletter.note }}</p>{% endif %}
+  </div>
+</div>
+</section>
+
+</main>
+
+<footer class="foot" id="about-site">
+  <div class="wrap foot-grid">
+    <div>
+      <h2>About this website</h2>
+      <p><strong>This is an independent information site.</strong> It is not the official website of {{ mp.name }} MP, the Labour Party or the House of Commons, and it is run by {{ cfg.site.runBy }}. {{ cfg.site.status }}.</p>
+      <p>Parliamentary and public-service data is shown factually and is refreshed automatically every morning. It is kept separate from any party-political content; this site carries none.</p>
+      <p>Spotted a mistake? Email <a href="mailto:{{ cfg.site.runByContact }}">{{ cfg.site.runByContact }}</a>.</p>
+    </div>
+    <div>
+      <h2>Sources &amp; freshness</h2>
+      <ul class="status-list">{% for s in status.sections or [] %}
+        <li><span class="dot dot-{{ s.status }}" aria-hidden="true"></span>{{ s.label }} – {% if s.status == "ok" %}updated{% elif s.status == "stale" %}last good data{% elif s.status == "not-configured" %}not yet connected{% else %}awaiting first update{% endif %}{% if s.retrievedDisplay and s.status in ("ok", "stale") %} {{ s.retrievedDisplay }}{% endif %}</li>
+      {% endfor %}</ul>
+    </div>
+    <div>
+      <h2>Small print</h2>
+      <ul class="plain">
+        <li><a href="privacy.html">Privacy notice</a></li>
+        <li><a href="privacy.html#sources">Data sources &amp; disclaimer</a></li>
+        <li><a href="privacy.html#accessibility">Accessibility statement</a></li>
+        <li><a href="https://github.com/{{ cfg.site.repo }}">Source code on GitHub</a></li>
+      </ul>
+      <p class="small">Contains Parliamentary information licensed under the Open Parliament Licence v3.0. Contains public sector information licensed under the Open Government Licence v3.0.</p>
+    </div>
+  </div>
+  <a class="to-top" href="#top">{{ icon("up") }}<span class="visually-hidden">Back to top</span></a>
+</footer>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

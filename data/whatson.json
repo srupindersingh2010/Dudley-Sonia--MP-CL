@@ -1,0 +1,12 @@
+{
+  "key": "whatson",
+  "label": "In Parliament this week",
+  "source": "UK Parliament What's On",
+  "sourceUrl": "https://whatson.parliament.uk/commons/",
+  "status": "pending",
+  "retrieved": null,
+  "retrievedDisplay": null,
+  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
+  "lastError": "RuntimeError: https://whatson-api.parliament.uk/calendar/events/list.json failed: ProxyError: HTTPSConnectionPool(host='whatson-api.parliament.uk', port=443): Max retries exceeded with url: /calendar/events/list.json?queryParameters.startDate=2026-11-03&queryParameters.endDate=2026-11-10&queryParame",
+  "items": []
+}

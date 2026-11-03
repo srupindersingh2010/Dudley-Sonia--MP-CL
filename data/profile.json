@@ -1,0 +1,12 @@
+{
+  "key": "profile",
+  "label": "MP profile & roles",
+  "source": "UK Parliament Members API",
+  "sourceUrl": "https://members.parliament.uk/member/5274",
+  "status": "pending",
+  "retrieved": null,
+  "retrievedDisplay": null,
+  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
+  "lastError": "RuntimeError: https://members-api.parliament.uk/api/Members/5274 failed: ProxyError: HTTPSConnectionPool(host='members-api.parliament.uk', port=443): Max retries exceeded with url: /api/Members/5274 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden'",
+  "items": []
+}

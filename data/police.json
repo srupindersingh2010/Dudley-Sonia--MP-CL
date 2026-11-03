@@ -1,0 +1,12 @@
+{
+  "key": "police",
+  "label": "Policing & safety",
+  "source": "data.police.uk (Home Office open data)",
+  "sourceUrl": "https://www.police.uk/pu/your-area/west-midlands-police/",
+  "status": "pending",
+  "retrieved": null,
+  "retrievedDisplay": null,
+  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
+  "lastError": "RuntimeError: could not resolve any neighbourhoods",
+  "items": []
+}

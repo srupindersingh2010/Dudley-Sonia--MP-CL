@@ -1,0 +1,12 @@
+{
+  "key": "bills",
+  "label": "Bills",
+  "source": "Bills API",
+  "sourceUrl": "https://bills.parliament.uk/?SponsorMemberId=5274",
+  "status": "pending",
+  "retrieved": null,
+  "retrievedDisplay": null,
+  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
+  "lastError": "RuntimeError: https://bills-api.parliament.uk/api/v1/Bills failed: ProxyError: HTTPSConnectionPool(host='bills-api.parliament.uk', port=443): Max retries exceeded with url: /api/v1/Bills?SponsorMemberId=5274&SortOrder=DateUpdatedDescending&Take=20 (Caused by ProxyError('Unable to connect to proxy', ",
+  "items": []
+}

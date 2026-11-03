@@ -1,0 +1,12 @@
+{
+  "key": "votes",
+  "label": "Votes",
+  "source": "Commons Votes API",
+  "sourceUrl": "https://members.parliament.uk/member/5274/voting",
+  "status": "pending",
+  "retrieved": null,
+  "retrievedDisplay": null,
+  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
+  "lastError": "RuntimeError: https://commonsvotes-api.parliament.uk/data/divisions.json/membervoting failed: ProxyError: HTTPSConnectionPool(host='commonsvotes-api.parliament.uk', port=443): Max retries exceeded with url: /data/divisions.json/membervoting?queryParameters.memberId=5274&queryParameters.skip=0&queryP",
+  "items": []
+}

@@ -1,0 +1,78 @@
+name: Daily data update
+
+on:
+  schedule:
+    # GitHub cron runs in UTC. 06:00 UTC = 07:00 BST (summer), 07:00 UTC = 07:00 GMT (winter).
+    # Both run; the "check time" step only lets the one that is 07:00 UK time continue.
+    - cron: '0 6 * * *'
+    - cron: '0 7 * * *'
+  workflow_dispatch:      # "Run workflow" button for a manual update
+  push:
+    branches: [main]
+    paths: ['templates/**', 'config/**', 'assets/**', 'scripts/build.py', 'data/manual/**']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check it is 07:00 UK time (scheduled runs only)
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then echo "go=yes" >> $GITHUB_OUTPUT; exit 0; fi
+          H=$(TZ=Europe/London date +%H)
+          echo "UK hour is $H"
+          if [ "$H" = "07" ]; then echo "go=yes" >> $GITHUB_OUTPUT; else echo "go=no" >> $GITHUB_OUTPUT; fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.go == 'yes'
+
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.go == 'yes'
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install dependencies
+        if: steps.gate.outputs.go == 'yes'
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium || echo "Playwright browser not installed – browser fallback disabled"
+
+      - name: Fetch data (only if not a pure design change)
+        if: steps.gate.outputs.go == 'yes' && github.event_name != 'push'
+        env:
+          DIARY_ICS_URL: ${{ secrets.DIARY_ICS_URL }}
+          DIARY_SHEET_CSV_URL: ${{ secrets.DIARY_SHEET_CSV_URL }}
+          GALLERY_SHEET_CSV_URL: ${{ secrets.GALLERY_SHEET_CSV_URL }}
+        run: python scripts/fetch_all.py
+
+      - name: Refresh gallery and diary (after design/content pushes)
+        if: steps.gate.outputs.go == 'yes' && github.event_name == 'push'
+        env:
+          DIARY_ICS_URL: ${{ secrets.DIARY_ICS_URL }}
+          DIARY_SHEET_CSV_URL: ${{ secrets.DIARY_SHEET_CSV_URL }}
+          GALLERY_SHEET_CSV_URL: ${{ secrets.GALLERY_SHEET_CSV_URL }}
+        run: python scripts/fetch_all.py gallery diary
+
+      - name: Build pages
+        if: steps.gate.outputs.go == 'yes'
+        run: python scripts/build.py
+
+      - name: Commit and push
+        if: steps.gate.outputs.go == 'yes'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data index.html privacy.html
+          if git diff --staged --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Daily update $(TZ=Europe/London date '+%Y-%m-%d %H:%M %Z')"
+          git pull --rebase origin main
+          git push origin HEAD:main

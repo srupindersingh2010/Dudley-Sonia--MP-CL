@@ -1,0 +1,12 @@
+{
+  "key": "wmca",
+  "label": "WMCA meetings",
+  "source": "WMCA governance calendar",
+  "sourceUrl": "https://governance.wmca.org.uk/mgCalendarMonthView.aspx",
+  "status": "pending",
+  "retrieved": null,
+  "retrievedDisplay": null,
+  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
+  "lastError": "RuntimeError: no ModernGov calendar reachable at: https://governance.wmca.org.uk, https://wmca.moderngov.co.uk",
+  "items": []
+}

@@ -1,0 +1,12 @@
+{
+  "key": "edms",
+  "label": "Early Day Motions",
+  "source": "Early Day Motions API",
+  "sourceUrl": "https://edm.parliament.uk/member/5274",
+  "status": "pending",
+  "retrieved": null,
+  "retrievedDisplay": null,
+  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
+  "lastError": "RuntimeError: https://oralquestionsandmotions-api.parliament.uk/EarlyDayMotions/list failed: ProxyError: HTTPSConnectionPool(host='oralquestionsandmotions-api.parliament.uk', port=443): Max retries exceeded with url: /EarlyDayMotions/list?parameters.memberId=5274&parameters.take=25&parameters.orderB",
+  "items": []
+}

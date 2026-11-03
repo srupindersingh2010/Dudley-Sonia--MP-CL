@@ -1,0 +1,12 @@
+{
+  "key": "stats",
+  "label": "Constituency profile",
+  "source": "ONS via Nomis",
+  "sourceUrl": "https://www.nomisweb.co.uk/",
+  "status": "pending",
+  "retrieved": null,
+  "retrievedDisplay": null,
+  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
+  "lastError": "RuntimeError: Claimant count: https://www.nomisweb.co.uk/api/v01/dataset/NM_162_1.data.csv failed: ProxyError: HTTPSConnectionPool(host='www.nomisweb.co.uk', port=4; TS001: https://www.nomisweb.co.uk/api/v01/dataset/def.sdmx.json failed: ProxyError: HTTPSConnectionPool(host='www.nomisweb.co.uk', por",
+  "items": []
+}

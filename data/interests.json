@@ -1,0 +1,12 @@
+{
+  "key": "interests",
+  "label": "Register of Members' Financial Interests",
+  "source": "Register of Interests API",
+  "sourceUrl": "https://members.parliament.uk/member/5274/registeredinterests",
+  "status": "pending",
+  "retrieved": null,
+  "retrievedDisplay": null,
+  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
+  "lastError": "RuntimeError: https://interests-api.parliament.uk/api/v1/Interests failed: ProxyError: HTTPSConnectionPool(host='interests-api.parliament.uk', port=443): Max retries exceeded with url: /api/v1/Interests?MemberId=5274&Take=100&SortOrder=PublishingDateDescending (Caused by ProxyError('Unable to connec",
+  "items": []
+}

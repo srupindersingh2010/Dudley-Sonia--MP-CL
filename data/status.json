@@ -1,0 +1,125 @@
+{
+  "updated": "2026-11-03T01:39:50.711053+00:00",
+  "updatedDisplay": "3 November 2026, 01:39",
+  "sections": [
+    {
+      "key": "profile",
+      "label": "MP profile & roles",
+      "status": "pending",
+      "retrievedDisplay": null,
+      "error": "RuntimeError: https://members-api.parliament.uk/api/Members/5274 failed: ProxyError: HTTPSConnectionPool(host='members-api.parliament.uk', port=443): Max retries exceeded with url: /api/Members/5274 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden'"
+    },
+    {
+      "key": "whatson",
+      "label": "In Parliament this week",
+      "status": "pending",
+      "retrievedDisplay": null,
+      "error": "RuntimeError: https://whatson-api.parliament.uk/calendar/events/list.json failed: ProxyError: HTTPSConnectionPool(host='whatson-api.parliament.uk', port=443): Max retries exceeded with url: /calendar/events/list.json?queryParameters.startDate=2026-11-03&queryParameters.endDate=2026-11-10&queryParame"
+    },
+    {
+      "key": "votes",
+      "label": "Votes",
+      "status": "pending",
+      "retrievedDisplay": null,
+      "error": "RuntimeError: https://commonsvotes-api.parliament.uk/data/divisions.json/membervoting failed: ProxyError: HTTPSConnectionPool(host='commonsvotes-api.parliament.uk', port=443): Max retries exceeded with url: /data/divisions.json/membervoting?queryParameters.memberId=5274&queryParameters.skip=0&queryP"
+    },
+    {
+      "key": "speeches",
+      "label": "Speeches",
+      "status": "pending",
+      "retrievedDisplay": null,
+      "error": "RuntimeError: https://hansard-api.parliament.uk/search/contributions/Spoken.json failed: ProxyError: HTTPSConnectionPool(host='hansard-api.parliament.uk', port=443): Max retries exceeded with url: /search/contributions/Spoken.json?queryParameters.memberId=5274&queryParameters.take=20&queryParameters"
+    },
+    {
+      "key": "questions",
+      "label": "Written questions",
+      "status": "pending",
+      "retrievedDisplay": null,
+      "error": "RuntimeError: https://questions-statements-api.parliament.uk/api/writtenquestions/questions failed: ProxyError: HTTPSConnectionPool(host='questions-statements-api.parliament.uk', port=443): Max retries exceeded with url: /api/writtenquestions/questions?askingMemberId=5274&take=20&skip=0 (Caused by P"
+    },
+    {
+      "key": "edms",
+      "label": "Early Day Motions",
+      "status": "pending",
+      "retrievedDisplay": null,
+      "error": "RuntimeError: https://oralquestionsandmotions-api.parliament.uk/EarlyDayMotions/list failed: ProxyError: HTTPSConnectionPool(host='oralquestionsandmotions-api.parliament.uk', port=443): Max retries exceeded with url: /EarlyDayMotions/list?parameters.memberId=5274&parameters.take=25&parameters.orderB"
+    },
+    {
+      "key": "bills",
+      "label": "Bills",
+      "status": "pending",
+      "retrievedDisplay": null,
+      "error": "RuntimeError: https://bills-api.parliament.uk/api/v1/Bills failed: ProxyError: HTTPSConnectionPool(host='bills-api.parliament.uk', port=443): Max retries exceeded with url: /api/v1/Bills?SponsorMemberId=5274&SortOrder=DateUpdatedDescending&Take=20 (Caused by ProxyError('Unable to connect to proxy', "
+    },
+    {
+      "key": "interests",
+      "label": "Register of Members' Financial Interests",
+      "status": "pending",
+      "retrievedDisplay": null,
+      "error": "RuntimeError: https://interests-api.parliament.uk/api/v1/Interests failed: ProxyError: HTTPSConnectionPool(host='interests-api.parliament.uk', port=443): Max retries exceeded with url: /api/v1/Interests?MemberId=5274&Take=100&SortOrder=PublishingDateDescending (Caused by ProxyError('Unable to connec"
+    },
+    {
+      "key": "petitions",
+      "label": "Petitions",
+      "status": "pending",
+      "retrievedDisplay": null,
+      "error": "RuntimeError: https://petition.parliament.uk/petitions.json failed: ProxyError: HTTPSConnectionPool(host='petition.parliament.uk', port=443): Max retries exceeded with url: /petitions.json?state=open&page=1 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Fo"
+    },
+    {
+      "key": "council",
+      "label": "Dudley Council meetings",
+      "status": "pending",
+      "retrievedDisplay": null,
+      "error": "RuntimeError: no ModernGov calendar reachable at: https://dudley.moderngov.co.uk, https://democracy.dudley.gov.uk, https://committees.dudley.gov.uk, https://moderngov.dudley.gov.uk"
+    },
+    {
+      "key": "wmca",
+      "label": "WMCA meetings",
+      "status": "pending",
+      "retrievedDisplay": null,
+      "error": "RuntimeError: no ModernGov calendar reachable at: https://governance.wmca.org.uk, https://wmca.moderngov.co.uk"
+    },
+    {
+      "key": "police",
+      "label": "Policing & safety",
+      "status": "pending",
+      "retrievedDisplay": null,
+      "error": "RuntimeError: could not resolve any neighbourhoods"
+    },
+    {
+      "key": "police_news",
+      "label": "Police news",
+      "status": "pending",
+      "retrievedDisplay": null,
+      "error": "RuntimeError: https://news.google.com/rss/search?q=%22West%20Midlands%20Police%22%20%28Dudley% failed: ProxyError: HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=%22West%20Midlands%20Police%22%20%28Dudley%20OR%20Sedgley%20OR%20Gornal%20OR%20Pensne"
+    },
+    {
+      "key": "stats",
+      "label": "Constituency profile",
+      "status": "pending",
+      "retrievedDisplay": null,
+      "error": "RuntimeError: Claimant count: https://www.nomisweb.co.uk/api/v01/dataset/NM_162_1.data.csv failed: ProxyError: HTTPSConnectionPool(host='www.nomisweb.co.uk', port=4; TS001: https://www.nomisweb.co.uk/api/v01/dataset/def.sdmx.json failed: ProxyError: HTTPSConnectionPool(host='www.nomisweb.co.uk', por"
+    },
+    {
+      "key": "news",
+      "label": "Local news",
+      "status": "pending",
+      "retrievedDisplay": null,
+      "error": "RuntimeError: Sonia Kumar MP website: https://sonia-kumar.co.uk/feed/ failed: ProxyError: HTTPSConnectionPool(host='sonia-kumar.co.uk'; Google News – Sonia Kumar: https://news.google.com/rss/search?q=%22Sonia%20Kumar%22%20(MP%20OR%20Dudley)%20 failed: Prox; Express & Star: https://www.expressandstar"
+    },
+    {
+      "key": "diary",
+      "label": "Meetings & events diary",
+      "status": "not-configured",
+      "retrievedDisplay": "3 November 2026, 01:39",
+      "error": null
+    },
+    {
+      "key": "gallery",
+      "label": "Photo gallery",
+      "status": "not-configured",
+      "retrievedDisplay": "3 November 2026, 01:39",
+      "error": null
+    }
+  ]
+}

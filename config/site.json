@@ -1,0 +1,165 @@
+{
+  "site": {
+    "title": "Sonia Kumar MP – Dudley Constituency Information",
+    "shortTitle": "Dudley MP Info",
+    "official": false,
+    "runBy": "Rupinder Singh (independent volunteer)",
+    "runByContact": "s.rupinder.singh@googlemail.com",
+    "status": "Independent prototype – not yet agreed with or endorsed by Sonia Kumar MP or her office",
+    "baseUrl": "https://srupindersingh2010.github.io/Dudley-Sonia--MP-CL/",
+    "repo": "srupindersingh2010/Dudley-Sonia--MP-CL"
+  },
+  "mp": {
+    "name": "Sonia Kumar",
+    "memberId": 5274,
+    "constituency": "Dudley",
+    "constituencyId": 4019,
+    "onsCode": "E14001204",
+    "party": "Labour",
+    "elected": "2024-07-04",
+    "photo": "assets/img/mp-photo.jpg",
+    "photoCredit": "",
+    "photoAlt": "Sonia Kumar, MP for Dudley",
+    "bio": "Sonia Kumar was elected as the first MP for the new Dudley constituency at the general election on 4 July 2024. Before entering Parliament she worked in the NHS, including at the Royal Orthopaedic Hospital in Birmingham, and she graduated from Aston University with a master's degree in business and management.",
+    "website": "https://sonia-kumar.co.uk/",
+    "socials": [
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/SoniaKumarMP",
+        "handle": "SoniaKumarMP"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/soniakumarmp/",
+        "handle": "@soniakumarmp"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/company/soniakumarmp/",
+        "handle": "Sonia Kumar MP"
+      }
+    ],
+    "parliamentProfile": "https://members.parliament.uk/member/5274/contact"
+  },
+  "contact": {
+    "officeName": "Constituency office",
+    "address": "8 Birmingham Street, Dudley",
+    "phone": "01384 885959",
+    "email": "sonia.kumar.mp@parliament.uk",
+    "westminster": "House of Commons, London SW1A 0AA",
+    "officialRoute": "https://members.parliament.uk/member/5274/contact",
+    "surgeries": "Sonia holds regular advice surgeries across Dudley. Surgeries are by appointment – email the office to book, giving your full name and home address so the team can confirm you live in the constituency.",
+    "findYourMp": "https://members.parliament.uk/FindYourMP"
+  },
+  "diary": {
+    "icsSecret": "DIARY_ICS_URL",
+    "sheetSecret": "DIARY_SHEET_CSV_URL",
+    "manualFile": "data/manual/diary.json"
+  },
+  "gallery": {
+    "sheetSecret": "GALLERY_SHEET_CSV_URL",
+    "manualFile": "data/manual/gallery.json"
+  },
+  "council": {
+    "name": "Dudley Metropolitan Borough Council",
+    "meetingsPage": "https://www.dudley.gov.uk/council-community/council-meetings/",
+    "moderngovCandidates": [
+      "https://dudley.moderngov.co.uk",
+      "https://democracy.dudley.gov.uk",
+      "https://committees.dudley.gov.uk",
+      "https://moderngov.dudley.gov.uk"
+    ],
+    "defaultLocation": "Council House, Priory Road, Dudley"
+  },
+  "combinedAuthority": {
+    "name": "West Midlands Combined Authority (WMCA)",
+    "moderngovCandidates": [
+      "https://governance.wmca.org.uk",
+      "https://wmca.moderngov.co.uk"
+    ],
+    "defaultLocation": "WMCA, 16 Summer Lane, Birmingham"
+  },
+  "police": {
+    "force": "west-midlands",
+    "forceName": "West Midlands Police",
+    "areaUrl": "https://www.police.uk/pu/your-area/west-midlands-police/",
+    "samplePoints": [
+      {
+        "name": "Dudley town centre",
+        "lat": 52.5123,
+        "lng": -2.0811
+      },
+      {
+        "name": "Kates Hill / Dixons Green",
+        "lat": 52.505,
+        "lng": -2.074
+      },
+      {
+        "name": "Sedgley",
+        "lat": 52.5405,
+        "lng": -2.123
+      },
+      {
+        "name": "Upper Gornal",
+        "lat": 52.53,
+        "lng": -2.109
+      },
+      {
+        "name": "Lower Gornal",
+        "lat": 52.5185,
+        "lng": -2.116
+      },
+      {
+        "name": "Woodsetton",
+        "lat": 52.5355,
+        "lng": -2.0905
+      },
+      {
+        "name": "Brockmoor",
+        "lat": 52.4905,
+        "lng": -2.1305
+      },
+      {
+        "name": "Pensnett",
+        "lat": 52.4975,
+        "lng": -2.1175
+      }
+    ],
+    "newsQuery": "\"West Midlands Police\" (Dudley OR Sedgley OR Gornal OR Pensnett)"
+  },
+  "news": {
+    "feeds": [
+      {
+        "name": "Sonia Kumar MP website",
+        "url": "https://sonia-kumar.co.uk/feed/",
+        "filter": false
+      },
+      {
+        "name": "Google News – Sonia Kumar",
+        "url": "https://news.google.com/rss/search?q=%22Sonia%20Kumar%22%20(MP%20OR%20Dudley)%20when:60d&hl=en-GB&gl=GB&ceid=GB:en",
+        "filter": false
+      },
+      {
+        "name": "Express & Star",
+        "url": "https://www.expressandstar.com/arc/outboundfeeds/rss/category/news/local-hubs/dudley/?outputType=xml",
+        "filter": true
+      },
+      {
+        "name": "Black Country Radio",
+        "url": "https://www.blackcountryradio.co.uk/news/local-headlines/feed/",
+        "filter": true
+      },
+      {
+        "name": "Dudley Council news",
+        "url": "https://councilnews.dudley.gov.uk/news/rss",
+        "filter": true
+      }
+    ],
+    "filterTerms": [
+      "sonia kumar",
+      "dudley mp",
+      "mp for dudley"
+    ]
+  },
+  "languages": []
+}

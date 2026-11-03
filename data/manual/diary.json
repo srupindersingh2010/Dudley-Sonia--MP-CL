@@ -1,0 +1,4 @@
+{
+  "_help": "Optional backup diary. Each event: title (start with [Surgery], [Coffee morning], [Visit] or [Event] to set the type), start as YYYY-MM-DDTHH:MM, optional end, location, description, booking (a link or 'Email the office'). Normally the office uses the Google Calendar or Google Sheet instead – see README.",
+  "events": []
+}

@@ -1,0 +1,49 @@
+{
+  "newsletter": {
+    "url": "",
+    "note": "A newsletter sign-up will appear here once the MP's office chooses a provider and approves how subscriber data is handled. Until then, please follow Sonia's own website and social channels for updates."
+  },
+  "help": [
+    {"group": "Urgent help", "icon": "alert", "links": [
+      {"label": "Emergency – police, fire, ambulance", "detail": "Call 999", "url": "tel:999"},
+      {"label": "NHS 111 – urgent medical help", "detail": "Call 111 or go online", "url": "https://111.nhs.uk/"},
+      {"label": "Samaritans – someone to talk to, 24/7", "detail": "Call 116 123 free", "url": "https://www.samaritans.org/"},
+      {"label": "National Domestic Abuse Helpline", "detail": "Call 0808 2000 247 free, 24/7", "url": "https://www.nationaldahelpline.org.uk/"}
+    ]},
+    {"group": "Council services", "icon": "home", "links": [
+      {"label": "Dudley Council – all services", "detail": "Bins, council tax, housing, schools, parking", "url": "https://www.dudley.gov.uk/"},
+      {"label": "Report a pothole or street problem", "detail": "FixMyStreet sends your report to the right council", "url": "https://www.fixmystreet.com/"},
+      {"label": "Find your local councillor", "detail": "Dudley Council", "url": "https://www.dudley.gov.uk/council-community/councillors/find-my-councillor/"},
+      {"label": "Your home, your forum – community meetings", "detail": "Dudley Council", "url": "https://www.dudley.gov.uk/council-community/your-home-your-forum/"}
+    ]},
+    {"group": "Health", "icon": "heart", "links": [
+      {"label": "Find a GP, dentist or pharmacy", "detail": "NHS service search", "url": "https://www.nhs.uk/service-search"},
+      {"label": "Mental health support – Mind", "detail": "Information and local services", "url": "https://www.mind.org.uk/"}
+    ]},
+    {"group": "Money, benefits & housing", "icon": "pound", "links": [
+      {"label": "Citizens Advice", "detail": "Free, independent advice on money, work, housing and more", "url": "https://www.citizensadvice.org.uk/"},
+      {"label": "Benefits on GOV.UK", "detail": "Universal Credit, PIP, Pension Credit and more", "url": "https://www.gov.uk/browse/benefits"},
+      {"label": "Check what benefits you could get", "detail": "Turn2us benefits calculator", "url": "https://www.turn2us.org.uk/"},
+      {"label": "Housing advice – Shelter", "detail": "Free housing advice and helpline", "url": "https://england.shelter.org.uk/"},
+      {"label": "Food banks – Trussell", "detail": "Find emergency food support near you", "url": "https://www.trussell.org.uk/"}
+    ]},
+    {"group": "Community & local directory", "icon": "people", "links": [
+      {"label": "Dudley Community Information Directory", "detail": "Clubs, groups, support services and activities", "url": "https://dudleyci.co.uk/"},
+      {"label": "WMNow – police and community alerts", "detail": "Free messages from your local police team", "url": "https://www.wmnow.co.uk/"},
+      {"label": "Crimestoppers – report anonymously", "detail": "Call 0800 555 111", "url": "https://crimestoppers-uk.org/"}
+    ]}
+  ],
+  "events": [
+    {"label": "Events in Dudley borough", "detail": "Dudley Council's events page – town halls, parks, museums", "url": "https://www.dudley.gov.uk/see-and-do/events/", "icon": "calendar"},
+    {"label": "Community directory events", "detail": "Groups and activities across the borough", "url": "https://dudleyci.co.uk/", "icon": "people"},
+    {"label": "Eventbrite – events near Dudley", "detail": "Talks, workshops, family days", "url": "https://www.eventbrite.co.uk/d/united-kingdom--dudley/events/", "icon": "ticket"},
+    {"label": "Black Country Living Museum", "detail": "What's on", "url": "https://bclm.com/", "icon": "museum"},
+    {"label": "Dudley Zoo & Castle", "detail": "Events and visiting information", "url": "https://www.dudleyzoo.org.uk/", "icon": "tree"}
+  ],
+  "parliamentLinks": [
+    {"label": "Find your MP", "url": "https://members.parliament.uk/FindYourMP"},
+    {"label": "Start or sign a petition", "url": "https://petition.parliament.uk/"},
+    {"label": "Commons Library constituency dashboards", "url": "https://commonslibrary.parliament.uk/constituency-dashboards/"},
+    {"label": "Watch Parliament live", "url": "https://parliamentlive.tv/"}
+  ]
+}

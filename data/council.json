@@ -1,0 +1,12 @@
+{
+  "key": "council",
+  "label": "Dudley Council meetings",
+  "source": "Dudley Council committee calendar",
+  "sourceUrl": "https://www.dudley.gov.uk/council-community/council-meetings/",
+  "status": "pending",
+  "retrieved": null,
+  "retrievedDisplay": null,
+  "lastAttempt": "2026-11-03T01:39:50.711053+00:00",
+  "lastError": "RuntimeError: no ModernGov calendar reachable at: https://dudley.moderngov.co.uk, https://democracy.dudley.gov.uk, https://committees.dudley.gov.uk, https://moderngov.dudley.gov.uk",
+  "items": []
+}
