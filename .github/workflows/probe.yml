@@ -1,0 +1,24 @@
+name: Probe URLs (maintenance)
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: 'Space-separated URLs to test'
+        required: true
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          pip install -q requests
+          python - <<'PY'
+          import os, requests
+          for u in os.environ["URLS"].split():
+              try:
+                  r = requests.get(u, timeout=30, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"})
+                  print("=====", u, r.status_code, r.url, len(r.text)); print(r.text[:2500])
+              except Exception as e:
+                  print("=====", u, "ERROR", e)
+          PY
+        env:
+          URLS: ${{ inputs.urls }}
