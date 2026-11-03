@@ -430,8 +430,17 @@ def _nomis_census(code, geos):
     defs = get_json(f"{NOMIS}/def.sdmx.json", params={"search": f"*{code}*"})
     kfs = defs["structure"]["keyfamilies"]["keyfamily"]
     kfs = kfs if isinstance(kfs, list) else [kfs]
-    ds = next(k["id"] for k in kfs if code.lower() in json.dumps(k.get("name", "")).lower())
-    loc, eng = nomis_geos(ds)
+    cands = [k["id"] for k in kfs if code.lower() in json.dumps(k.get("name", "")).lower()]
+    ds, err = None, None
+    for cid in cands:  # several releases may exist; use one that has 2024 constituencies
+        try:
+            loc, eng = nomis_geos(cid)
+            ds = cid
+            break
+        except Exception as e:
+            err = e
+    if not ds:
+        raise RuntimeError(f"{code}: {err}")
     r = get(f"{NOMIS}/{ds}.data.csv", params={"geography": f"{loc},{eng}", "measures": "20301"},
             accept="text/csv")
     rows = list(csv.DictReader(io.StringIO(r.text)))
@@ -476,8 +485,13 @@ def fetch_profile_stats():
     tables = [
         ("TS001", "People", "Usual residents (Census 2021)", None),
         ("TS037", "Health", "General health (Census 2021)", ["Very good health", "Good health", "Bad health", "Very bad health"]),
-        ("TS054", "Housing", "Housing tenure (Census 2021)", None),
-        ("TS066", "Work & benefits", "Economic activity, residents 16+ (Census 2021)", None),
+        ("TS054", "Housing", "Housing tenure of households (Census 2021)",
+         ["Owned outright", "Owned with a mortgage or loan", "Social rented", "Private rented",
+          "Owns outright", "Owns with a mortgage or loan", "Rented from council or Local Authority",
+          "Other social rented", "Private landlord or letting agency"]),
+        ("TS066", "Work & benefits", "Economic activity, residents 16+ (Census 2021)",
+         ["In employment", "Unemployed", "Retired", "Student", "Looking after home or family",
+          "Long-term sick or disabled"]),
     ]
     charts = []
     for code, group, label, keep in tables:
@@ -495,9 +509,12 @@ def fetch_profile_stats():
             for cat, g in data.items():
                 if cat.lower().startswith("total") or ons not in g:
                     continue
-                if keep and not any(k.lower() == cat.lower() for k in keep):
+                tail = cat.split(":")[-1].strip()
+                if keep and not any(k.lower() == tail.lower() for k in keep):
                     continue
-                bars.append({"label": cat, "local": g.get(ons), "england": g.get("E92000001")})
+                if any(b["label"] == tail for b in bars):
+                    continue
+                bars.append({"label": tail, "local": g.get(ons), "england": g.get("E92000001")})
             bars = sorted(bars, key=lambda b: -(b["local"] or 0))[:7]
             if bars:
                 charts.append({"group": group, "title": label, "bars": bars, "dataset": ds,
